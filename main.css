@@ -49,6 +49,7 @@ body{
 #welcome-section h1{
   font-size: 60px;
   margin: 0px;
+  text-align: center;
 }
 
 #welcome-section p{
@@ -83,7 +84,7 @@ body{
   }
 }
 
-@media only screen and (min-width: 400px){
+@media only screen and (max-width: 400px){
   #project-grid{
      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
