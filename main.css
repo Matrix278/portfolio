@@ -74,7 +74,7 @@ body{
   display: grid;
   padding: 50px 0px 50px 0px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: 350px;
+/*   grid-template-rows: 350px; */
   grid-gap: 40px;
 }
 
@@ -84,9 +84,15 @@ body{
   }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (min-width: 400px){
   #project-grid{
      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 390px){
+  #project-grid{
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
