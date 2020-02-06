@@ -343,7 +343,8 @@ nav {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  margin-top: 20px;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -447,6 +448,8 @@ nav {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .skillsBackground {
@@ -532,6 +535,8 @@ nav {
   justify-content: center;
   width: 100%;
   height: auto;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .portfolioBackground {
@@ -618,6 +623,8 @@ nav {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  margin-top: -50px;
+  padding-top: 50px;
 }
 
 .contactBackground {
