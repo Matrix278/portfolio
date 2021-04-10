@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -11,305 +11,220 @@
 
     <title>Portfolio</title>
     <meta name="description" content="Portfolio of Martin Sidorov" />
-    <meta name="keywords" content="html, css" />
+    <meta name="keywords" content="Martin, html, css" />
     <meta name="subject" content="Portfolio" />
     <meta content="Portfolio" />
-    <meta content="website" />
-
-    <!---------------DEVICON--------------->
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
-    />
 
     <!---------------GOOGLE FONTS--------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap&subset=latin-ext"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
     />
 
     <!---------------FONT AWESOME--------------->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
 
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="spinner-wrapper">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-    </div>
     <!-------- NAVBAR --------->
     <header>
-      <nav class="navbar" id="nav">
-        <input type="checkbox" id="checkbox-menu" />
-        <label for="checkbox-menu">
-          <ul class="menu touch">
-            <li><a class="logo" href="">Martin</a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <span class="toggle">☰</span>
-        </label>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid py-3">
+          <a class="navbar-brand mx-5" href="#home">MARTIN SIDOROV</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#resume">Resume</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-------- HOME --------->
-    <div class="homeBackground">
-      <div id="home">
-        <h1 class="welcome">Welcome to my portfolio</h1>
-        <p class="welcomeTitle">Nice to meet you</p>
-        <a href="#about" class="btn buttonMore">More about me</a>
-        <a href="#about" class="downButton"
-          ><i class="fa fa-angle-double-down" aria-hidden="true"></i
-        ></a>
+    <section class="homeBackground" id="home">
+      <div class="container d-flex h-100">
+        <div class="align-self-center text-center mx-auto">
+          <h1>MARTIN SIDOROV</h1>
+          <p class="mt-4 robotoFont">Welcome to my portfolio</p>
+          <a
+            class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
+            href="#projects"
+            >Show projects</a
+          >
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-------- ABOUT --------->
-    <div class="aboutBackground">
-      <div class="container">
-        <div id="about">
-          <div class="aboutMeTitle">About me</div>
-          <div class="aboutMeTitleShadow">About me</div>
-          <div class="educationGrid">
-            <div class="educationFirst">
-              <h3>2007 - 2016</h3>
-              <hr class="educationLine" />
-              <h4>Student</h4>
-              <p>
-                The first school days were in Kehra Gymnasium for 9 years. After
-                9 class I went to Tallinn Polytechnic.
-              </p>
-            </div>
-            <div class="educationSecond">
-              <h3>2016 - 2019</h3>
-              <hr class="educationLine" />
-              <h4>Junior Software Developer</h4>
-              <p>
-                In Tallinn Polytechnic I studied for Junior Software Developer,
-                where I learned how to do websites, programms and apps for
-                mobiles. The languages and technologies HTML, CSS, JS,
-                Bootstrap, PHP, SQL, C# were learned here.
-              </p>
-            </div>
-            <div class="educationThree">
-              <h3>2019 - 2021</h3>
-              <hr class="educationLine" />
-              <h4>Junior Logistics IT Systems Specialist</h4>
-              <p>For now I study for Logistics IT Systems Specialist.</p>
-            </div>
+    <section class="aboutSection" id="about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 aboutImage"></div>
+          <div class="col-6 aboutHistory align-self-center text-left mx-auto">
+            <h1>ABOUT</h1>
+            <p>
+              I am Junior Software Developer who loves to learn new technologies
+              in my path of programming.
+              <br /><br />
+              My first work of being an developer started in Tallink, while I
+              was there as an intern, I got many experience of how the
+              developing and teamwork goes. Learned Elm language, new
+              technologies and it was the first time when I worked on linux. Now
+              I am working on linux everyday)
+              <br /><br />
+              Right now I am working in Wallester, experiencing new work process
+              with Go language, PostgreSQL, AWS, microservices architecture and
+              other interesting technologies.
+              <br /><br />
+              In my free time, I am trying to freelance, just because I love to
+              create different websites by my own on PHP with databases. While I
+              were in school, I had much time and I also loved to try myself in
+              creating different games on Unity, there are some Android and 3D
+              games that are uploaded into my GitHub.
+            </p>
+            <!-- Button for history -->
+            <a
+              class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
+              href="https://medium.com/"
+              target="_blank"
+              >See history</a
+            >
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-------- Resume --------->
+    <section class="resumeSection" id="resume">
+      <div class="container-fluid">
+        <div class="row align-self-center text-center mx-auto">
+          <div class="col-12 resumeHeader">
+            <h1 class="orange">MY RESUME</h1>
+            <p class="robotoFont">Professional experience</p>
+          </div>
+        </div>
+
+        <div class="row align-self-center text-center mx-auto resumeJobRow">
+          <div class="col-12 robotoFont resumeJobName">
+            <p class="robotoFont">
+              <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> July 2020
+              - Present time
+            </p>
+            <span class="orange oswaldFont">WALLESTER</span>
+            <br />
+            <span class="orange oswaldFont">Junior Software Engineer</span>
+          </div>
+          <div class="col-6 montserratFont mx-auto">
+            <p>
+              Technologies and languages that were learned: Go language,
+              PostgreSQL, AWS, gRPC, HTML, CSS, JavaScript, Unit/Automation
+              tests, Agile development, Linux (Pop!_OS)
+            </p>
+          </div>
+
+          <div class="col-12 robotoFont resumeJobName mt-5">
+            <p class="robotoFont">
+              <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> January
+              2020 - June 2020
+            </p>
+            <span class="orange oswaldFont">TALLINK</span>
+            <br />
+            <span class="orange oswaldFont">Junior Developer (Trainee)</span>
+          </div>
+          <div class="col-6 montserratFont mx-auto">
+            <p>
+              Technologies and languages that were learned: Front-end
+              development of
+              <a href="https://mobile.tallink.com" target="_blank"
+                >https://mobile.tallink.com</a
+              >, Elm language, HTML, CSS (SCSS), JavaScript, Unit tests, Agile
+              development, Linux (Ubuntu), JIRA, Git, BitBucket
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-self-center text-center mx-auto">
+          <div class="col-12">
+            <a
+              class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
+              href="assets/Martin_Sidorov_CV_New.pdf"
+              >Download CV(PDF)</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-------- SKILLS --------->
-    <div class="skillsBackground">
-      <div class="container">
-        <div id="skills">
-          <div class="skillsTitle">Skills</div>
-          <div class="skillsTitleShadow">Skills</div>
-          <div class="skillsText">
-            <p>
-              I love to learn new technologies. Next to, you can see some of
-              those technologies that I have learned at my software developer
-              path.
-            </p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JS</li>
-              <li>PHP</li>
-              <li>MySQL/SQL</li>
-              <li>Bootstrap</li>
-              <li>C#</li>
-              <li>React</li>
-            </ul>
-          </div>
-          <div class="skillsGrid">
-            <i class="devicon-html5-plain-wordmark"></i>
-            <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-php-plain"></i>
-            <i class="devicon-mysql-plain"></i>
-            <i class="devicon-bootstrap-plain"></i>
-            <i class="devicon-react-original-wordmark"></i>
-            <i class="devicon-csharp-plain"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="skills">
+      <div class="container-fluid"></div>
+    </section>
 
-    <!-------- PORTFOLIO --------->
-    <div class="portfolioBackground">
-      <div class="container">
-        <div id="portfolio">
-          <div class="portfolioTitle">Portfolio</div>
-          <div class="portfolioTitleShadow">Portfolio</div>
-          <div class="portfolioGrid">
-            <div class="project-tile">
-              <a
-                class="project"
-                href="http://nitram278.000webhostapp.com/"
-                target="_blank"
-              >
-                <img class="project-image" src="img/mGames.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Website of games (with CMS)<span
-                    class="code"
-                    >/&gt;</span
-                  >
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="http://method27.000webhostapp.com/laptops/"
-                target="_blank"
-              >
-                <img class="project-image" src="img/laptops.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Website of laptops (with
-                  CMS)<span class="code">/&gt;</span>
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="https://maartcelebrate.000webhostapp.com/"
-                target="_blank"
-              >
-                <img class="project-image" src="img/celebrationPlanner.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Celebration planner (with
-                  CMS)<span class="code">/&gt;</span>
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="https://play.google.com/store/apps/details?id=com.nitram.tictactoeMS"
-                target="_blank"
-              >
-                <img class="project-image" src="img/ticTacToe.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Tic-Tac-Toe<span class="code"
-                    >/&gt;</span
-                  >
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="https://play.google.com/store/apps/details?id=com.nitram278.rockPaperScissors"
-                target="_blank"
-              >
-                <img class="project-image" src="img/rockPaperScissors.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Rock-Paper-Scissors<span
-                    class="code"
-                    >/&gt;</span
-                  >
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="https://play.google.com/store/apps/details?id=com.MSANDevs.Becomeahacker"
-                target="_blank"
-              >
-                <img class="project-image" src="img/becomeAHacker.png" />
-                <p class="project-title">
-                  <span class="code">&lt;</span>Become a hacker(Developed with
-                  Aleksei)<span class="code">/&gt;</span>
-                </p>
-              </a>
-            </div>
-            <div class="project-tile">
-              <a
-                class="project"
-                href="https://codepen.io/Matrix27/pens/public"
-                target="_blank"
-              >
-                <img
-                  class="project-image"
-                  src="https://www.npofocus.nl/thumbs/i/14000/mod_media_image/14105.w1913.0.c9cc1fa.png"
-                />
-                <p class="project-title">
-                  <span class="code">&lt;</span>FreeCodeCamp Projects<span
-                    class="code"
-                    >/&gt;</span
-                  >
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-------- PROJECTS --------->
+    <section id="projects">
+      <div class="container-fluid"></div>
+    </section>
 
     <!-------- CONTACT --------->
-    <div class="contactBackground">
-      <div class="container">
-        <div id="contact">
-          <div class="contactTitle">Contact</div>
-          <div class="contactTitleShadow">Contact</div>
-          <div class="contactGrid">
-            <div class="contactLink">
-              <a href="https://github.com/Matrix278" target="_blank"
-                ><i class="fa fa-github" aria-hidden="true"></i> GitHub</a
-              >
-            </div>
-            <div class="contactLink">
-              <a href="https://facebook.com/nitram278" target="_blank"
-                ><i class="fa fa-facebook-official" aria-hidden="true"></i>
-                Facebook</a
-              >
-            </div>
-            <div class="contactLink">
-              <a
-                href="https://www.linkedin.com/in/martin-s-8002a0157"
-                target="_blank"
-                ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                LinkedIn</a
-              >
-            </div>
-            <div class="contactLink">
-              <a href="mailto:martin.sidorov27@gmail.com"
-                ><i class="fa fa-envelope-o" aria-hidden="true"></i> Send a
-                mail</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="contact">
+      <div class="container-fluid"></div>
+    </section>
 
-    <footer>
+    <!-- <footer>
       <p>
         This is portfolio. All the projects and contact details given are real.
       </p>
-      <p>© Martin Sidorov</p>
-    </footer>
+      <p>© Martin Sidorov 2020</p>
+    </footer> -->
 
     <button onclick="topFunction()" id="scrollToTop" title="Scroll to top">
       <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
     </button>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
       //------------------------SCROLL TO TOP------------------------//
@@ -334,34 +249,6 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
-
-      //------------------------NAVIGATION COLOR CHANGE------------------------//
-      var nav = document.querySelector("nav"); // Identify target
-
-      window.addEventListener("scroll", function (event) {
-        // To listen for event
-        event.preventDefault();
-
-        if (window.scrollY >= 650) {
-          // Just an example
-          nav.style.backgroundColor = "#202223"; // or default color
-        } else {
-          nav.style.backgroundColor = "transparent";
-        }
-      });
-
-      //------------------------PRELOADER------------------------//
-      $(document).ready(function () {
-        //Preloader
-        $(window).on("load", function () {
-          preloaderFadeOutTime = 500;
-          function hidePreloader() {
-            var preloader = $(".spinner-wrapper");
-            preloader.fadeOut(preloaderFadeOutTime);
-          }
-          hidePreloader();
-        });
-      });
     </script>
   </body>
 </html>
