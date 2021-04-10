@@ -46,6 +46,25 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
+nav .afterCollapsed {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+nav .afterCollapsed a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .afterCollapsed a:hover {
+  color: #ef463e;
+}
+
+nav .afterCollapsed a.headerSocialLinks {
+  padding: 15px;
+}
+
 .homeBackground {
   height: 100vh;
   background: url("../img/banner2.jpg") no-repeat center/cover;
