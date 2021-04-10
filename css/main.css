@@ -121,6 +121,37 @@ nav .afterCollapsed a.headerSocialLinks {
   font-size: 1.125em;
 }
 
+.skillsSection {
+  background-color: #ef463e;
+  padding: 7em 0em;
+}
+
+.skillsSection h1 {
+  font-size: 2.5em;
+}
+
+.projectsSection {
+  background-color: #1b1b1b;
+  padding: 7em 0em;
+}
+
+.projectsSection h1 {
+  font-size: 2.5em;
+}
+
+.projectsHeader p {
+  font-size: 1.125em;
+}
+
+.projectsGrid a {
+  text-decoration: none;
+  color: white;
+}
+
+.projectsGrid a:hover {
+  color: #ef463e;
+}
+
 /*---------------------------FOOTER-----------------------------*/
 #scrollToTop {
   display: none;

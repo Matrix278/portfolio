@@ -145,8 +145,10 @@
     <section class="aboutSection" id="about">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6 aboutImage"></div>
-          <div class="col-6 aboutHistory align-self-center text-left mx-auto">
+          <div class="col-md-6 col-lg-6 aboutImage"></div>
+          <div
+            class="col-md-6 col-lg-6 aboutHistory align-self-center text-left mx-auto"
+          >
             <h1>ABOUT</h1>
             <p>
               I am Junior Software Developer who loves to learn new technologies
@@ -242,13 +244,104 @@
     </section>
 
     <!-------- SKILLS --------->
-    <section id="skills">
-      <div class="container-fluid"></div>
+    <section class="skillsSection" id="skills">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4"></div>
+        </div>
+      </div>
     </section>
 
     <!-------- PROJECTS --------->
-    <section id="projects">
-      <div class="container-fluid"></div>
+    <section class="projectsSection" id="projects">
+      <div class="container-fluid">
+        <div class="row align-self-center text-center mx-auto">
+          <div class="col-12 projectsHeader">
+            <h1 class="orange">PROJECTS</h1>
+            <p class="robotoFont">Website, android projects</p>
+          </div>
+          <div class="row mx-auto mt-5 projectsGrid">
+            <div class="col-md-6 col-lg-4 p-4">
+              <a
+                href="https://maartcelebrate.000webhostapp.com/"
+                target="_blank"
+              >
+                <img
+                  class="img-fluid"
+                  src="img/celebrationPlanner.png"
+                  alt="Celebration planner project"
+                />
+                <h3>Thesis work: Celebration planner (with CMS panel)</h3>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 p-4">
+              <a href="http://nitram278.000webhostapp.com/" target="_blank">
+                <img
+                  class="img-fluid"
+                  src="img/mGames.png"
+                  alt="MGames project"
+                />
+                <h3>Website of games (with CMS panel)</h3>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 p-4">
+              <a
+                href="http://method27.000webhostapp.com/laptops/"
+                target="_blank"
+              >
+                <img
+                  class="img-fluid"
+                  src="img/laptops.png"
+                  alt="Laptops project"
+                />
+                <h3>Website of laptops (with CMS panel)</h3>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 p-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.MSANDevs.Becomeahacker"
+                target="_blank"
+              >
+                <img
+                  class="img-fluid"
+                  src="img/becomeAHacker.png"
+                  alt="Become a hacker game"
+                />
+                <h3>Become a hacker (Developed with Aleksei)</h3>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 p-4">
+              <a href="https://codepen.io/Matrix27/pens/public" target="_blank">
+                <img
+                  class="img-fluid"
+                  src="img/freeCodeCampProjects.jpg"
+                  alt="FreeCodeCamp projects"
+                />
+                <h3>FreeCodeCamp projects</h3>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 p-4">
+              <a
+                href="https://play.google.com/store/apps/developer?id=Martin+Sidorov"
+                target="_blank"
+              >
+                <img
+                  class="img-fluid"
+                  src="img/martinGooglePlayGames.jpg"
+                  alt="Google Play games"
+                />
+                <h3>Google Play games</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-------- CONTACT --------->
@@ -268,8 +361,14 @@
     </button>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 
     <script>
+      $(".nav-link").on("click", function (e) {
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+      });
+
       //------------------------SCROLL TO TOP------------------------//
       var button = document.getElementById("scrollToTop");
 
