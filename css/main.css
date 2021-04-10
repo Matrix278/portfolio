@@ -130,6 +130,10 @@ nav .afterCollapsed a.headerSocialLinks {
   font-size: 2.5em;
 }
 
+.skillsGrid i {
+  font-size: 7em;
+}
+
 .projectsSection {
   background-color: #1b1b1b;
   padding: 7em 0em;
