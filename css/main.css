@@ -179,6 +179,13 @@ nav .afterCollapsed a.headerSocialLinks {
   background-color: #2d2d2d;
 }
 
+@media (max-width: 768px) {
+  .contactSection {
+    margin: 3em 0em;
+    padding: 5em 1em;
+  }
+}
+
 .contactHeader p {
   font-size: 1.125em;
 }
