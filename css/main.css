@@ -130,6 +130,10 @@ nav .afterCollapsed a.headerSocialLinks {
   font-size: 2.5em;
 }
 
+.skillsHeader p {
+  font-size: 1.125em;
+}
+
 .skillsGrid i {
   font-size: 7em;
 }
