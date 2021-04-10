@@ -44,29 +44,30 @@
     <!---------- MAIN CSS ---------->
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <hr>
     <!-------- NAVBAR --------->
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid py-3">
-          <a class="navbar-brand mx-5" href="#home">MARTIN SIDOROV</a>
-          <div class="afterCollapsed d-lg-none d-xl-none">
+          <a class="navbar-brand mx-5 d-none d-md-block d-lg-block d-xl-block" href="#home">MARTIN SIDOROV</a>
+          <a class="navbar-brand mx-2 d-block d-md-none d-lg-none d-xl-none" href="#home">MARTIN SIDOROV</a>
+          <div class="afterCollapsed d-block d-md-none d-lg-none d-xl-none">
             <a
-              class="headerSocialLinks d-none d-sm-block"
+              class="headerSocialLinks"
               target="_blank"
               href="https://www.linkedin.com/in/martin-s-8002a0157"
             >
               <i class="fa fa-linkedin fa-1x" aria-hidden="true"></i>
             </a>
             <a
-              class="headerSocialLinks d-none d-sm-block"
+              class="headerSocialLinks"
               target="_blank"
               href="https://www.github.com/Matrix278"
             >
               <i class="fa fa-github fa-1x" aria-hidden="true"></i>
             </a>
             <a
-              class="headerSocialLinks d-none d-sm-block"
+              class="headerSocialLinks"
               href="mailto:martin.sidorov27@gmail.com"
             >
               <i class="fa fa-envelope-o fa-1x" aria-hidden="true"></i>
@@ -176,7 +177,6 @@
               creating different games on Unity, there are some Android and 3D
               games that are uploaded into my GitHub.
             </p>
-            <!-- Button for history -->
             <a
               class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
               href="https://medium.com/"
@@ -393,17 +393,50 @@
         </div>
       </div>
     </section>
+  <hr/>
 
     <!-------- CONTACT --------->
-    <section id="contact">
-      <div class="container-fluid"></div>
+    <section class="contactSection" id="contact">
+      <div class="container-fluid">
+        <div class="row align-self-center mx-auto">
+          <div class="col-12 contactHeader text-left">
+            <h1>CONTACT ME</h1>
+            <p class="robotoFont">
+              Do you want to receive detailed information about my projects or
+              cooperation options? Please contact me by LinkedIn or by mail.
+            </p>
+          </div>
+          <div class="col-12 py-5 contactLinks">
+            <a
+              href="https://www.linkedin.com/in/martin-s-8002a0157"
+              target="_blank"
+              ><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
+            </a>
+            <a
+              class="m-5"
+              href="https://www.github.com/Matrix278"
+              target="_blank"
+              ><i class="fa fa-github fa-4x" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:martin.sidorov27@gmail.com"
+              ><i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
       <div class="container-fluid">
         <div class="row align-self-center text-center mx-auto">
           <div class="col-12">
-            <p>©2021 Martin Sidorov</p>
+            <p>
+              ©2020 -
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Martin Sidorov
+            </p>
           </div>
         </div>
       </div>
