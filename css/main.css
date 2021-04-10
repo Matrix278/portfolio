@@ -46,8 +46,8 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
-.nav-link a:hover {
-  color: #ef463e;
+.nav-item a:hover {
+  color: #ef463e !important;
 }
 
 nav .afterCollapsed {
@@ -123,6 +123,15 @@ nav .afterCollapsed a.headerSocialLinks {
 
 .resumeJobName {
   font-size: 1.125em;
+}
+
+.tallinkLink {
+  text-decoration: none;
+  color: white;
+}
+
+.tallinkLink:hover {
+  color: #ef463e;
 }
 
 .skillsSection {
