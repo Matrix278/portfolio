@@ -23,3 +23,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//------------------------Change copyright year------------------------//
+document.querySelector("#copyright-year").innerText = new Date().getFullYear();
