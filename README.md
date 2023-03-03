@@ -4,7 +4,7 @@
 
 ### My Portfolio site -
 
-https://martinsidorov.tk/
+https://martinsidorov.com
 
 https://matrix278.github.io/portfolio/
 
