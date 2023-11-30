@@ -18,8 +18,16 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
+.font-size-20 {
+  font-size: 20px;
+}
+
 .orange {
   color: #ef463e;
+}
+
+.pink {
+  color: #d63970;
 }
 
 .oswaldFont {
@@ -127,7 +135,7 @@ nav .afterCollapsed a.headerSocialLinks {
 
 .tallinkLink {
   text-decoration: none;
-  color: white;
+  color: #d63970;
 }
 
 .tallinkLink:hover {
