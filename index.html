@@ -43,16 +43,44 @@
 
     <!---------- MAIN CSS ---------->
     <link rel="stylesheet" href="css/main.css" />
-    
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="matrix278" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
+
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="matrix278"
+      data-description="Support me on Buy me a coffee!"
+      data-message=""
+      data-color="#FFDD00"
+      data-position="Left"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script>
   </head>
-  <hr>
+  <body>
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
     <!-------- NAVBAR --------->
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
         <div class="container py-3">
-          <a class="navbar-brand mx-5 d-none d-md-block d-lg-block d-xl-block" href="#home">MARTIN SIDOROV</a>
-          <a class="navbar-brand mx-2 d-block d-md-none d-lg-none d-xl-none" href="#home">MARTIN SIDOROV</a>
+          <a
+            class="navbar-brand mx-5 d-none d-md-block d-lg-block d-xl-block"
+            href="#home"
+            >MARTIN SIDOROV</a
+          >
+          <a
+            class="navbar-brand mx-2 d-block d-md-none d-lg-none d-xl-none"
+            href="#home"
+            >MARTIN SIDOROV</a
+          >
           <div class="afterCollapsed d-block d-md-none d-lg-none d-xl-none">
             <a
               class="headerSocialLinks"
@@ -136,418 +164,495 @@
     </header>
 
     <main>
-    <!-------- HOME --------->
-    <section class="homeBackground" id="home">
-      <div class="container d-flex h-100">
-        <div class="align-self-center text-center mx-auto">
-          <h1>MARTIN SIDOROV</h1>
-          <p class="mt-4 robotoFont">Welcome to my portfolio</p>
-          <a
-            class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-            href="#projects"
-            >Show projects</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-------- ABOUT --------->
-    <section class="aboutSection" id="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 aboutImage"></div>
-          <div
-            class="col-md-6 col-lg-6 aboutHistory align-self-center text-left mx-auto"
-          >
-            <h1>ABOUT</h1>
-            <p>
-              I am a Software Engineer who loves to learn new technologies
-              in my path of programming.
-              <br /><br />
-              My first work of being a developer started in Tallink, while I
-              was there as an intern, I got a lot of experience of how development
-              and teamwork goes. Learned Elm language, new technologies and it was
-              the first time when I worked on Linux. Now I am working on Linux every day)
-              <br /><br />
-              Right now I am working in Wallester, experiencing a new work process with
-              Go language, PostgreSQL, AWS, microservices architecture, and other interesting technologies.
-              <br /><br />
-              In my free time, I am trying to freelance, just because I love to
-              create different websites on my own on PHP together with databases.
-              While I was in school, I had much time and I also loved to try myself
-              in creating different games on Unity, there are some Android and 3D
-              games that are uploaded into my GitHub.
-            </p>
+      <!-------- HOME --------->
+      <section class="homeBackground" id="home">
+        <div class="container d-flex h-100">
+          <div class="align-self-center text-center mx-auto">
+            <h1>MARTIN SIDOROV</h1>
+            <p class="mt-4 robotoFont">Welcome to my portfolio</p>
             <a
               class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-              href="https://martin-sidorov.medium.com/journey-to-programming-8e94e65ba59f"
-              target="_blank"
-              >See history</a
+              href="#projects"
+              >Show projects</a
             >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-------- RESUME --------->
-    <section class="resumeSection" id="resume">
-      <div class="container">
-        <div class="row align-self-center text-center mx-auto">
-          <div class="col-12 resumeHeader">
-            <h1 class="orange">MY RESUME</h1>
-            <p class="robotoFont">Professional experience</p>
-          </div>
-        </div>
-
-        <div class="row align-self-center text-center mx-auto resumeJobRow">
-          <div class="col-12 robotoFont resumeJobName">
-            <p class="robotoFont">
-              <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> April 2022
-              - Present time
-            </p>
-            <span class="orange oswaldFont">WALLESTER AS</span>
-            <br />
-            <span class="orange oswaldFont">Software Engineer</span>
-          </div>
-          <div class="col-6 montserratFont mx-auto">
-            <h3 class="pink">Tasks and Achievements:</h3>
-            <ul class="font-size-20" style="text-align: left;">
-              <li class="mb-2">Learned some Redis usage when wrote feature for changing SMS providers.</li>
-              <li class="mb-2">Most of the time working with tasks independently, writing more useful code, tests, reviewing teammates code. Tasks sometime missed more descriptive description, so it was needed to first fully investigate the problem, and check what actually should have been done within the task, discuss with lead, pm, so the task could be actually done. Urgent features, bug fixes.</li>
-              <li class="mb-2">Helping QA, other Software Engineers if they need help, by investigating together.</li>
-              <li class="mb-2">Prepared important feature of pricing plans on business product with diagrams. Created an understandable description of this task, discussed with team lead, and implemented this feature from start to end along with cron job workers to run necessary checks periodically to charge fees.</li>
-              <li class="mb-2">Discussed tasks of endpoints for admin team that should have been transferred and edited, by transferring most of our CRM endpoints functional to another API with some changes.</li>
-              <li class="mb-2">Implemented reCAPTCHA Enterprise for our login system.</li>
-              <li class="mb-2">Implemented use of our API by using external API call inside to update Fraud Monitoring data, get and receive data by SQS listener from another team. JWT token generation and read.</li>
-              <li class="mb-2">Investigated task, deploy problems through Lens or Kibana logs if it was needed</li>
-            </ul>
-          </div>
-          
-          <div class="col-12 robotoFont resumeJobName mt-5">
-            <p class="robotoFont">
-              <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> July 2020
-              - March 2022
-            </p>
-            <span class="orange oswaldFont">WALLESTER AS</span>
-            <br />
-            <span class="orange oswaldFont">Junior Software Engineer</span>
-          </div>
-          <div class="col-6 montserratFont mx-auto">
-            <h3 class="pink">Technologies:</h3>
-            <ul class="list-unstyled font-size-20">
-              <li>Go language</li>
-              <li>PostgreSQL</li>
-              <li>Microservices, gRPC, AWS</li>
-              <li>AWS S3, SQS, SNS, Parameter store, CodeBuild</li>
-              <li>Visa Tokenization, Apple Pay, Google Pay</li>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Unit/Automation tests</li>
-              <li>Agile development</li>
-              <li>Linux (Pop!_OS)</li>
-              <li>JIRA/Clickup</li>
-              <li>Postman</li>
-              <li>Git, GitHub</li>
-            </ul>
-          </div>
-          <div class="col-6 montserratFont mx-auto">
-            <h3 class="pink">Tasks and Achievements:</h3>
-            <ul class="font-size-20" style="text-align: left;">
-              <li class="mb-2">Started with task of Gosec linter analysis, checked every service and fixed those security issues</li>
-              <li class="mb-2">Made a presentation about Gosec linter, how to deal with issues and presented to team</li>
-              <li class="mb-2">Wrote automation tests for the endpoints and features that I have implemented</li>
-              <li class="mb-2">YoxPay card platform project bug-fixes, API endpoints, translations with provided templates for UI</li>
-              <li class="mb-2">CRM platform bug-fixes and new endpoints with its template by hand with Bootstrap</li>
-              <li class="mb-2">BOP platform endpoints and bug-fixes</li>
-              <li class="mb-2">Every kind of SMS-es and email letters by using SQS-es</li>
-              <li class="mb-2">Worked with some visa tokens documentation to help add flow for visa tokenization</li>
-              <li class="mb-2">Got more experience on reviewing code of other teammates</li>
-            </ul>
-          </div>
-
-          <hr class="mt-4">
-
-          <div class="col-12 robotoFont resumeJobName mt-5">
-            <p class="robotoFont">
-              <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> January
-              2020 - June 2020
-            </p>
-            <span class="orange oswaldFont">TALLINK GRUPP AS</span>
-            <br />
-            <span class="orange oswaldFont">Junior Developer (Trainee)</span>
-          </div>
-          <div class="col-6 montserratFont mx-auto">
-            <h3 class="pink">Technologies:</h3>
-            <ul class="list-unstyled font-size-20">
-              <li>Front-end development of <a class="tallinkLink" href="https://mobile.tallink.com" target="_blank">https://mobile.tallink.com</a></li>
-              <li>Elm language</li>
-              <li>HTML, CSS (SCSS), JavaScript</li>
-              <li>Unit tests</li>
-              <li>Agile development</li>
-              <li>Linux (Ubuntu)</li>
-              <li>JIRA</li>
-              <li>Git, BitBucket</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr>
-
-        <div class="row align-self-center text-center mx-auto">
-          <div class="col-12">
-            <a
-              class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-              href="assets/Martin_Sidorov_CV.pdf"
-              >Download CV(PDF)</a
+      <!-------- ABOUT --------->
+      <section class="aboutSection" id="about">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 aboutImage"></div>
+            <div
+              class="col-md-6 col-lg-6 aboutHistory align-self-center text-left mx-auto"
             >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-------- SKILLS --------->
-    <section class="skillsSection" id="skills">
-      <div class="container">
-        <div class="row align-self-center text-center mx-auto">
-          <div class="col-12 skillsHeader">
-            <h1>SKILLS</h1>
-            <p class="robotoFont">
-              Next to, you can see some of
-              those technologies that I have learned at my software developer
-              path.
-            </p>
-          </div>
-        </div>
-        <div class="row text-center mx-auto mt-5 skillsGrid">
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-html5-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-css3-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-javascript-plain" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-bootstrap-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-php-plain" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-go-plain" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-elm-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-mysql-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-postgresql-plain" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-csharp-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-git-plain-wordmark" aria-hidden="true"></i>
-          </div>
-          <div class="col-md-6 col-lg-4 p-4">
-            <i class="devicon-github-original-wordmark" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-------- PROJECTS --------->
-    <section class="projectsSection" id="projects">
-      <div class="container">
-        <div class="row align-self-center text-center mx-auto">
-          <div class="col-12 projectsHeader">
-            <h1 class="orange">PROJECTS</h1>
-            <p class="robotoFont">Website, game projects</p>
-          </div>
-          <div class="row mx-auto mt-5 projectsGrid">
-            <div class="col-md-6 col-lg-4 p-4">
+              <h1>ABOUT</h1>
+              <p>
+                I am a Software Engineer who loves to learn new technologies in
+                my path of programming.
+                <br /><br />
+                My first work of being a developer started in Tallink, while I
+                was there as an intern, I got a lot of experience of how
+                development and teamwork goes. Learned Elm language, new
+                technologies and it was the first time when I worked on Linux.
+                Now I am working on Linux every day)
+                <br /><br />
+                Right now I am working in Wallester, experiencing a new work
+                process with Go language, PostgreSQL, AWS, microservices
+                architecture, and other interesting technologies.
+                <br /><br />
+                In my free time, I am trying to freelance, just because I love
+                to create different websites on my own on PHP together with
+                databases. While I was in school, I had much time and I also
+                loved to try myself in creating different games on Unity, there
+                are some Android and 3D games that are uploaded into my GitHub.
+              </p>
               <a
-                href="https://webwell.org/projects/dream-smile-competitions"
+                class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
+                href="https://martin-sidorov.medium.com/journey-to-programming-8e94e65ba59f"
                 target="_blank"
+                >See history</a
               >
-                <img
-                  class="img-fluid"
-                  src="img/dscompetitions.png"
-                  alt="DSCompetitions"
-                />
-                <h3>Website of competitions (with CMS panel)</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://webwell.org/projects/pymbris"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/of_pymbris.jpg"
-                  alt="ÕF Pümbris"
-                />
-                <h3>Website of wooden cases</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://webwell.org/projects/celebrations-planner"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/celebrationPlanner.png"
-                  alt="Celebration planner project"
-                />
-                <h3>School thesis work: Celebration planner (with CMS panel)</h3>
-              </a>
-            </div>
-            
-            
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://webwell.org/projects/laptops"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/laptops.png"
-                  alt="Laptops project"
-                />
-                <h3>School project work: Website of laptops (with CMS panel)</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://webwell.org/projects/matrix-games"
-                target="_blank"
-              >  
-              <img
-                  class="img-fluid"
-                  src="img/mGames.png"
-                  alt="MGames project"
-                />
-                <h3>(PROJECT DB MISSING)Website of games (with CMS panel)</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.MSANDevs.Becomeahacker"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/becomeAHacker.png"
-                  alt="Become a hacker game"
-                />
-                <h3>Become a hacker (Developed with Aleksei)</h3>
-              </a>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://drive.google.com/file/d/1UBB5AC07v0vTLoZd4oOLECgDJns3hnwf/view?usp=sharing"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/heisen.png"
-                  alt="Heisen 3D game"
-                />
-                <h3>Heisen - Horror game (My Unity 3D game developing tries)</h3>
-              </a>
-            </div>
-            
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://github.com/Matrix278/islandtram/releases/download/1.0/IslandGame_v1.0.rar"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/islandtram.png"
-                  alt="Islandtram 3D game"
-                />
-                <h3>Islandtram - Survival game (My Unity 3D game developing tries)</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a href="https://codepen.io/Matrix27/pens/public" target="_blank">
-                <img
-                  class="img-fluid"
-                  src="img/freeCodeCampProjects.jpg"
-                  alt="FreeCodeCamp projects"
-                />
-                <h3>FreeCodeCamp projects</h3>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <a
-                href="https://play.google.com/store/apps/developer?id=Matrix278"
-                target="_blank"
-              >
-                <img
-                  class="img-fluid"
-                  src="img/martinGooglePlayGames.jpg"
-                  alt="Google Play games"
-                />
-                <h3>Google Play games</h3>
-              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  <hr class="orange" />
+      </section>
 
-    <!-------- CONTACT --------->
-    <section class="contactSection" id="contact">
-      <div class="container">
-        <div class="row align-self-center mx-auto">
-          <div class="col-12 contactHeader text-left">
-            <h1>CONTACT ME</h1>
-            <p class="montserratFont">
-              Do you want to receive detailed information about my projects or
-              cooperation options? Please contact me by LinkedIn or by mail.
-            </p>
+      <!-------- RESUME --------->
+      <section class="resumeSection" id="resume">
+        <div class="container">
+          <div class="row align-self-center text-center mx-auto">
+            <div class="col-12 resumeHeader">
+              <h1 class="orange">MY RESUME</h1>
+              <p class="robotoFont">Professional experience</p>
+            </div>
           </div>
-          <div class="col-12 py-5 contactLinks">
-            <a
-              href="https://www.linkedin.com/in/martin-s-8002a0157"
-              target="_blank"
-              ><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
-            </a>
-            <a
-              class="m-5"
-              href="https://www.github.com/Matrix278"
-              target="_blank"
-              ><i class="fa fa-github fa-4x" aria-hidden="true"></i>
-            </a>
-            <a href="mailto:martin.sidorov27@gmail.com"
-              ><i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
-            </a>
+
+          <div class="row align-self-center text-center mx-auto resumeJobRow">
+            <div class="col-12 robotoFont resumeJobName">
+              <p class="robotoFont">
+                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> April
+                2022 - Present time
+              </p>
+              <span class="orange oswaldFont">WALLESTER AS</span>
+              <br />
+              <span class="orange oswaldFont">Software Engineer</span>
+            </div>
+            <div class="col-6 montserratFont mx-auto">
+              <h3 class="pink">Tasks and Achievements:</h3>
+              <ul class="font-size-20" style="text-align: left">
+                <li class="mb-2">
+                  Learned some Redis usage when wrote feature for changing SMS
+                  providers.
+                </li>
+                <li class="mb-2">
+                  Most of the time working with tasks independently, writing
+                  more useful code, tests, reviewing teammates code. Tasks
+                  sometime missed more descriptive description, so it was needed
+                  to first fully investigate the problem, and check what
+                  actually should have been done within the task, discuss with
+                  lead, pm, so the task could be actually done. Urgent features,
+                  bug fixes.
+                </li>
+                <li class="mb-2">
+                  Helping QA, other Software Engineers if they need help, by
+                  investigating together.
+                </li>
+                <li class="mb-2">
+                  Prepared important feature of pricing plans on business
+                  product with diagrams. Created an understandable description
+                  of this task, discussed with team lead, and implemented this
+                  feature from start to end along with cron job workers to run
+                  necessary checks periodically to charge fees.
+                </li>
+                <li class="mb-2">
+                  Discussed tasks of endpoints for admin team that should have
+                  been transferred and edited, by transferring most of our CRM
+                  endpoints functional to another API with some changes.
+                </li>
+                <li class="mb-2">
+                  Implemented reCAPTCHA Enterprise for our login system.
+                </li>
+                <li class="mb-2">
+                  Implemented use of our API by using external API call inside
+                  to update Fraud Monitoring data, get and receive data by SQS
+                  listener from another team. JWT token generation and read.
+                </li>
+                <li class="mb-2">
+                  Investigated task, deploy problems through Lens or Kibana logs
+                  if it was needed
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 robotoFont resumeJobName mt-5">
+              <p class="robotoFont">
+                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> July
+                2020 - March 2022
+              </p>
+              <span class="orange oswaldFont">WALLESTER AS</span>
+              <br />
+              <span class="orange oswaldFont">Junior Software Engineer</span>
+            </div>
+            <div class="col-6 montserratFont mx-auto">
+              <h3 class="pink">Technologies:</h3>
+              <ul class="list-unstyled font-size-20">
+                <li>Go language</li>
+                <li>PostgreSQL</li>
+                <li>Microservices, gRPC, AWS</li>
+                <li>AWS S3, SQS, SNS, Parameter store, CodeBuild</li>
+                <li>Visa Tokenization, Apple Pay, Google Pay</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Unit/Automation tests</li>
+                <li>Agile development</li>
+                <li>Linux (Pop!_OS)</li>
+                <li>JIRA/Clickup</li>
+                <li>Postman</li>
+                <li>Git, GitHub</li>
+              </ul>
+            </div>
+            <div class="col-6 montserratFont mx-auto">
+              <h3 class="pink">Tasks and Achievements:</h3>
+              <ul class="font-size-20" style="text-align: left">
+                <li class="mb-2">
+                  Started with task of Gosec linter analysis, checked every
+                  service and fixed those security issues
+                </li>
+                <li class="mb-2">
+                  Made a presentation about Gosec linter, how to deal with
+                  issues and presented to team
+                </li>
+                <li class="mb-2">
+                  Wrote automation tests for the endpoints and features that I
+                  have implemented
+                </li>
+                <li class="mb-2">
+                  YoxPay card platform project bug-fixes, API endpoints,
+                  translations with provided templates for UI
+                </li>
+                <li class="mb-2">
+                  CRM platform bug-fixes and new endpoints with its template by
+                  hand with Bootstrap
+                </li>
+                <li class="mb-2">BOP platform endpoints and bug-fixes</li>
+                <li class="mb-2">
+                  Every kind of SMS-es and email letters by using SQS-es
+                </li>
+                <li class="mb-2">
+                  Worked with some visa tokens documentation to help add flow
+                  for visa tokenization
+                </li>
+                <li class="mb-2">
+                  Got more experience on reviewing code of other teammates
+                </li>
+              </ul>
+            </div>
+
+            <hr class="mt-4" />
+
+            <div class="col-12 robotoFont resumeJobName mt-5">
+              <p class="robotoFont">
+                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> January
+                2020 - June 2020
+              </p>
+              <span class="orange oswaldFont">TALLINK GRUPP AS</span>
+              <br />
+              <span class="orange oswaldFont">Junior Developer (Trainee)</span>
+            </div>
+            <div class="col-6 montserratFont mx-auto">
+              <h3 class="pink">Technologies:</h3>
+              <ul class="list-unstyled font-size-20">
+                <li>
+                  Front-end development of
+                  <a
+                    class="tallinkLink"
+                    href="https://mobile.tallink.com"
+                    target="_blank"
+                    >https://mobile.tallink.com</a
+                  >
+                </li>
+                <li>Elm language</li>
+                <li>HTML, CSS (SCSS), JavaScript</li>
+                <li>Unit tests</li>
+                <li>Agile development</li>
+                <li>Linux (Ubuntu)</li>
+                <li>JIRA</li>
+                <li>Git, BitBucket</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row align-self-center text-center mx-auto">
+            <div class="col-12">
+              <a
+                class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
+                href="assets/Martin_Sidorov_CV.pdf"
+                >Download CV(PDF)</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <!-------- SKILLS --------->
+      <section class="skillsSection" id="skills">
+        <div class="container">
+          <div class="row align-self-center text-center mx-auto">
+            <div class="col-12 skillsHeader">
+              <h1>SKILLS</h1>
+              <p class="robotoFont">
+                Next to, you can see some of those technologies that I have
+                learned at my software developer path.
+              </p>
+            </div>
+          </div>
+          <div class="row text-center mx-auto mt-5 skillsGrid">
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-html5-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-css3-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-javascript-plain" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i
+                class="devicon-bootstrap-plain-wordmark"
+                aria-hidden="true"
+              ></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-php-plain" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-go-plain" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-elm-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-mysql-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-postgresql-plain" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-csharp-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i class="devicon-git-plain-wordmark" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-6 col-lg-4 p-4">
+              <i
+                class="devicon-github-original-wordmark"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------- PROJECTS --------->
+      <section class="projectsSection" id="projects">
+        <div class="container">
+          <div class="row align-self-center text-center mx-auto">
+            <div class="col-12 projectsHeader">
+              <h1 class="orange">PROJECTS</h1>
+              <p class="robotoFont">Website, game projects</p>
+            </div>
+            <div class="row mx-auto mt-5 projectsGrid">
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://webwell.org/projects/dream-smile-competitions"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/dscompetitions.png"
+                    alt="DSCompetitions"
+                  />
+                  <h3>Website of competitions (with CMS panel)</h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a href="https://webwell.org/projects/pymbris" target="_blank">
+                  <img
+                    class="img-fluid"
+                    src="img/of_pymbris.jpg"
+                    alt="ÕF Pümbris"
+                  />
+                  <h3>Website of wooden cases</h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://webwell.org/projects/celebrations-planner"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/celebrationPlanner.png"
+                    alt="Celebration planner project"
+                  />
+                  <h3>
+                    School thesis work: Celebration planner (with CMS panel)
+                  </h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a href="https://webwell.org/projects/laptops" target="_blank">
+                  <img
+                    class="img-fluid"
+                    src="img/laptops.png"
+                    alt="Laptops project"
+                  />
+                  <h3>
+                    School project work: Website of laptops (with CMS panel)
+                  </h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://webwell.org/projects/matrix-games"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/mGames.png"
+                    alt="MGames project"
+                  />
+                  <h3>(PROJECT DB MISSING)Website of games (with CMS panel)</h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.MSANDevs.Becomeahacker"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/becomeAHacker.png"
+                    alt="Become a hacker game"
+                  />
+                  <h3>Become a hacker (Developed with Aleksei)</h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://drive.google.com/file/d/1UBB5AC07v0vTLoZd4oOLECgDJns3hnwf/view?usp=sharing"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/heisen.png"
+                    alt="Heisen 3D game"
+                  />
+                  <h3>
+                    Heisen - Horror game (My Unity 3D game developing tries)
+                  </h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://github.com/Matrix278/islandtram/releases/download/1.0/IslandGame_v1.0.rar"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/islandtram.png"
+                    alt="Islandtram 3D game"
+                  />
+                  <h3>
+                    Islandtram - Survival game (My Unity 3D game developing
+                    tries)
+                  </h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://codepen.io/Matrix27/pens/public"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/freeCodeCampProjects.jpg"
+                    alt="FreeCodeCamp projects"
+                  />
+                  <h3>FreeCodeCamp projects</h3>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4 p-4">
+                <a
+                  href="https://play.google.com/store/apps/developer?id=Matrix278"
+                  target="_blank"
+                >
+                  <img
+                    class="img-fluid"
+                    src="img/martinGooglePlayGames.jpg"
+                    alt="Google Play games"
+                  />
+                  <h3>Google Play games</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="orange" />
+
+      <!-------- CONTACT --------->
+      <section class="contactSection" id="contact">
+        <div class="container">
+          <div class="row align-self-center mx-auto">
+            <div class="col-12 contactHeader text-left">
+              <h1>CONTACT ME</h1>
+              <p class="montserratFont">
+                Do you want to receive detailed information about my projects or
+                cooperation options? Please contact me by LinkedIn or by mail.
+              </p>
+            </div>
+            <div class="col-12 py-5 contactLinks">
+              <a
+                href="https://www.linkedin.com/in/martin-s-8002a0157"
+                target="_blank"
+                ><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
+              </a>
+              <a
+                class="m-5"
+                href="https://www.github.com/Matrix278"
+                target="_blank"
+                ><i class="fa fa-github fa-4x" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:martin.sidorov27@gmail.com"
+                ><i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container">
         <div class="row align-self-center text-center mx-auto">
           <div class="col-12">
             <p>
-              ©2020 - <span class="montserratFont" id="copyright-year"></span> Martin Sidorov
+              ©2020 -
+              <span class="montserratFont" id="copyright-year"></span> Martin
+              Sidorov
             </p>
           </div>
         </div>
