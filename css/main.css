@@ -235,6 +235,19 @@ nav .afterCollapsed a.headerSocialLinks {
   font-size: 7em;
 }
 
+.certificatesSection {
+  background-color: #1b1b1b;
+  padding: 7em 0em;
+}
+
+.certificatesSection h1 {
+  font-size: 2.5em;
+}
+
+.certificatesHeader p {
+  font-size: 1.125em;
+}
+
 .projectsSection {
   background-color: #1b1b1b;
   padding: 7em 0em;
