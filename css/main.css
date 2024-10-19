@@ -18,6 +18,10 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
+.blacky-bg {
+  background-color: #1b1b1b;
+}
+
 /*-----------------------LOADER---------------------------*/
 .spinner-wrapper {
   position: fixed;
@@ -249,7 +253,7 @@ nav .afterCollapsed a.headerSocialLinks {
 }
 
 .projectsSection {
-  background-color: #1b1b1b;
+  background-color: #ef463e;
   padding: 7em 0em;
 }
 
