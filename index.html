@@ -1,922 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="theme-color" content="#6e8fd1" />
-
-    <title>Portfolio</title>
-    <meta name="description" content="Portfolio of Martin Sidorov" />
-    <meta name="keywords" content="Martin, html, css" />
-    <meta name="subject" content="Portfolio" />
-    <meta content="Portfolio" />
-
-    <!---------------GOOGLE FONTS--------------->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    />
-
-    <!--------- DEVICON ---------->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-
-    <!--------------- FONT AWESOME --------------->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-
-    <!---------- BOOTSTRAP CSS ---------->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <!---------- MAIN CSS ---------->
-    <link rel="stylesheet" href="css/main.css" />
-
-    <script
-      data-name="BMC-Widget"
-      data-cfasync="false"
-      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-      data-id="matrix278"
-      data-description="Support me on Buy me a coffee!"
-      data-message=""
-      data-color="#FFDD00"
-      data-position="Left"
-      data-x_margin="18"
-      data-y_margin="18"
-    ></script>
-  </head>
-  <body>
-    <!--     <div class="spinner-wrapper">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-    </div> -->
-    <!-------- NAVBAR --------->
-    <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container py-3">
-          <a
-            class="navbar-brand mx-5 d-none d-md-block d-lg-block d-xl-block"
-            href="#home"
-            >MARTIN SIDOROV</a
-          >
-          <a
-            class="navbar-brand mx-2 d-block d-md-none d-lg-none d-xl-none"
-            href="#home"
-            >MARTIN SIDOROV</a
-          >
-          <div class="afterCollapsed d-block d-md-none d-lg-none d-xl-none">
-            <a
-              class="headerSocialLinks"
-              target="_blank"
-              href="https://www.linkedin.com/in/martin-sidorov"
-            >
-              <i class="fa fa-linkedin fa-1x" aria-hidden="true"></i>
-            </a>
-            <a
-              class="headerSocialLinks"
-              target="_blank"
-              href="https://www.github.com/Matrix278"
-            >
-              <i class="fa fa-github fa-1x" aria-hidden="true"></i>
-            </a>
-            <a
-              class="headerSocialLinks"
-              href="mailto:martin.sidorov27@gmail.com"
-            >
-              <i class="fa fa-envelope-o fa-1x" aria-hidden="true"></i>
-            </a>
+<head>
+    <title>Martin Sidorov — Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700,800,900|Space+Grotesk:400,500,600,700,800,900&amp;subset=latin">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+</head>
+<body class="antialiased font-body bg-body text-body bg-zinc-950 text-zinc-100">
+    <div class="">
+                
+      <nav class="py-6 px-6 lg:px-12 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800/50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="#" class="font-heading text-xl tracking-tight text-white font-semibold">Martin Sidorov</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#about" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">About</a>
+            <a href="#resume" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Resume</a>
+            <a href="#skills" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Skills</a>
+            <a href="#certificates" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Certificates</a>
+            <a href="#projects" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Projects</a>
+            <a href="#contact" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Contact</a>
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+          <button class="md:hidden text-zinc-400 hover:text-white mobile-menu-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page" href="#home"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#resume">Resume</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#certificates">Certificates</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item d-none d-lg-block d-xl-block">
-                <a
-                  class="nav-link"
-                  href="https://www.linkedin.com/in/martin-sidorov"
-                  target="_blank"
-                  ><i class="fa fa-linkedin fa-1x" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="nav-item d-none d-lg-block d-xl-block">
-                <a
-                  class="nav-link"
-                  href="https://www.github.com/Matrix278"
-                  target="_blank"
-                  ><i class="fa fa-github fa-1x" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="nav-item d-none d-lg-block d-xl-block">
-                <a class="nav-link" href="mailto:martin.sidorov27@gmail.com"
-                  ><i class="fa fa-envelope-o fa-1x" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
+        </div>
+        <div class="mobile-menu hidden md:hidden mt-6 pb-4 border-t border-zinc-800 pt-6">
+          <div class="flex flex-col gap-4">
+            <a href="#about" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">About</a>
+            <a href="#resume" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Resume</a>
+            <a href="#skills" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Skills</a>
+            <a href="#certificates" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Certificates</a>
+            <a href="#projects" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Projects</a>
+            <a href="#contact" class="text-sm text-zinc-400 hover:text-white transition-colors duration-200">Contact</a>
           </div>
         </div>
       </nav>
-    </header>
-
-    <main>
-      <!-------- HOME --------->
-      <section class="homeBackground" id="home">
-        <div class="container d-flex h-100">
-          <div class="align-self-center text-center mx-auto">
-            <h1>MARTIN SIDOROV</h1>
-            <p class="mt-4 robotoFont">Welcome to my portfolio</p>
-            <a
-              class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-              href="#projects"
-              >Show projects</a
-            >
-          </div>
+                
+      <section class="relative min-h-screen flex items-center py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-20">
+          <div class="absolute inset-0 bg-gradient-to-l from-rose-500/10 to-transparent"></div>
         </div>
-      </section>
-
-      <!-------- ABOUT --------->
-      <section class="aboutSection" id="about">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-lg-6 aboutImage"></div>
-            <div
-              class="col-md-6 col-lg-6 aboutHistory align-self-center text-left mx-auto"
-            >
-              <h1>ABOUT</h1>
-              <p>
-                Experienced software engineer with a robust background in
-                backend development, specializing in microservices architecture,
-                Golang programming, RPC implementation, and AWS services. With
-                over three to four years of dedicated work in backend systems, I
-                have successfully developed, and maintained scalable
-                applications, using RPC communication protocols, and utilizing
-                AWS services including SQS, SNS, and S3 to build robust and
-                scalable cloud-native applications.
-                <br /><br />
-                In addition to my backend proficiency, I possess a strong
-                foundation in front-end technologies, honed through hobbyist
-                projects and some of professional experience in web development.
-                Skilled in HTML, CSS, and JavaScript, I create visually
-                appealing and user-friendly websites tailored to the needs of
-                clients. This blend of backend expertise and frontend
-                proficiency enables me to deliver end-to-end solutions that meet
-                both functional requirements and user experience expectations.
-                <br /><br />
-                With a proven ability to work collaboratively within
-                cross-functional teams, I excel in driving projects from concept
-                to completion, adhering to best practices and industry
-                standards. My commitment to continuous learning and staying
-                updated with emerging technologies ensures that I deliver
-                innovative and high-quality software solutions.
-              </p>
-              <a
-                class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-                href="https://martin-sidorov.medium.com/journey-to-programming-8e94e65ba59f"
-                target="_blank"
-                >See history</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-------- RESUME --------->
-      <section class="resumeSection" id="resume">
-        <div class="container">
-          <div class="row align-self-center text-center mx-auto">
-            <div class="col-12 resumeHeader">
-              <h1 class="orange">MY RESUME</h1>
-              <p class="robotoFont">Professional experience</p>
-            </div>
-          </div>
-
-          <div class="row align-self-center text-center mx-auto resumeJobRow">
-            <div class="col-12 robotoFont resumeJobName">
-              <p class="robotoFont">
-                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> April
-                2022 - Present time
-              </p>
-              <span class="orange oswaldFont">WALLESTER AS</span>
-              <br />
-              <span class="orange oswaldFont">Software Engineer</span>
-            </div>
-            <div class="col-12 col-md-6 montserratFont mx-auto">
-              <h3 class="pink">Tasks and Achievements:</h3>
-              <ul class="font-size-20" style="text-align: left">
-                <li class="mb-2">
-                  Enhanced system functionality by implementing Redis features
-                  for SMS provider change.
-                </li>
-                <li class="mb-2">
-                  Managed tasks independently, improving code quality and
-                  implementing comprehensive tests.
-                </li>
-                <li class="mb-2">
-                  Collaborated with QA and teammates to investigate and resolve
-                  issues efficiently.
-                </li>
-                <li class="mb-2">
-                  Developed and implemented pricing plans feature for business
-                  product, resulting in increased revenue.
-                </li>
-                <li class="mb-2">
-                  Facilitated seamless transfer and modification of CRM
-                  endpoints to another API for admin team usage.
-                </li>
-                <li class="mb-2">
-                  Integrated some features into login system, improving security
-                  and enhancing logging capabilities.
-                </li>
-                <li class="mb-2">
-                  Improved fraud monitoring by implementing external API calls
-                  and processing SQS messages, reducing fraudulent activities.
-                </li>
-                <li class="mb-2">
-                  Conducted thorough investigation of issues using Lens, logs.
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-12 robotoFont resumeJobName mt-5">
-              <p class="robotoFont">
-                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> July
-                2020 - March 2022
-              </p>
-              <span class="orange oswaldFont">WALLESTER AS</span>
-              <br />
-              <span class="orange oswaldFont">Junior Software Engineer</span>
-            </div>
-            <div class="col-12 col-md-6 montserratFont mx-auto">
-              <h3 class="pink">Technologies:</h3>
-              <ul class="list-unstyled font-size-20">
-                <li>Back-end development</li>
-                <li>AWS S3, SQS, SNS</li>
-                <li>Go language</li>
-                <li>PostgreSQL</li>
-                <li>Microservices, gRPC, AWS</li>
-                <li>Visa Tokenization, Apple Pay, Google Pay</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Unit/Automation tests</li>
-                <li>Agile development</li>
-                <li>Linux (Pop!_OS)</li>
-                <li>JIRA/Clickup</li>
-                <li>Postman</li>
-                <li>Git, GitHub</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 montserratFont mx-auto">
-              <h3 class="pink">Tasks and Achievements:</h3>
-              <ul class="font-size-20" style="text-align: left">
-                <li class="mb-2">
-                  Conducted thorough linter analysis across microservices,
-                  resolving security issues to bolster system robustness.
-                </li>
-                <li class="mb-2">
-                  Presented comprehensive overview of linter usage and
-                  resolution methodologies, promoting knowledge dissemination
-                  within the team.
-                </li>
-                <li class="mb-2">
-                  Automated testing procedures for implemented endpoints and
-                  features, guaranteeing dependable functionality.
-                </li>
-                <li class="mb-2">
-                  Contributed to bug fixes and enhancements in card platform
-                  projects, including API endpoints and UI translations,
-                  resulting in improved user experience.
-                </li>
-                <li class="mb-2">
-                  Addressed bugs and introduced new endpoints in the CRM
-                  platform, employing Bootstrap for streamlined UI templating.
-                </li>
-                <li class="mb-2">
-                  Resolved issues and introduced features for client portal
-                  platform endpoints, elevating user satisfaction.
-                </li>
-                <li class="mb-2">
-                  Managed SMS and email communication using SQS, optimizing
-                  message delivery efficiency.
-                </li>
-                <li class="mb-2">
-                  Assisted in integrating visa token documentation, facilitating
-                  implementation of visa-related functionalities.
-                </li>
-                <li class="mb-2">
-                  Enhanced collaboration and skill development through active
-                  participation in code review processes.
-                </li>
-              </ul>
-            </div>
-
-            <hr class="mt-4" />
-
-            <div class="col-12 robotoFont resumeJobName mt-5">
-              <p class="robotoFont">
-                <i class="fa fa-id-badge fa-2x" aria-hidden="true"></i> January
-                2020 - June 2020
-              </p>
-              <span class="orange oswaldFont">TALLINK GRUPP AS</span>
-              <br />
-              <span class="orange oswaldFont">Junior Developer (Trainee)</span>
-            </div>
-            <div class="col-12 col-md-6 montserratFont mx-auto">
-              <h3 class="pink">Technologies:</h3>
-              <ul class="list-unstyled font-size-20">
-                <li>
-                  Front-end development of
-                  <a
-                    class="tallinkLink"
-                    href="https://mobile.tallink.com"
-                    target="_blank"
-                    >https://mobile.tallink.com</a
-                  >
-                </li>
-                <li>Elm language</li>
-                <li>HTML, CSS (SCSS), JavaScript</li>
-                <li>Unit tests</li>
-                <li>Agile development</li>
-                <li>Linux (Ubuntu)</li>
-                <li>JIRA</li>
-                <li>Git, BitBucket</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 montserratFont mx-auto">
-              <h3 class="pink">Tasks and Achievements:</h3>
-              <ul class="font-size-20" style="text-align: left">
-                <li class="mb-2">
-                  Utilized Elm language to develop and enhance features on the
-                  front-end of https://mobile.tallink.com/, working
-                  collaboratively within a small team of developers.
-                </li>
-                <li class="mb-2">
-                  Successfully addressed bugs and integrated new
-                  functionalities, contributing to the overall improvement of
-                  the platform.
-                </li>
-                <li class="mb-2">
-                  Implemented rigorous unit testing procedures to ensure the
-                  stability and reliability of the application.
-                </li>
-                <li class="mb-2">
-                  Proficiently utilized JIRA for project management and task
-                  tracking, while leveraging BitBucket for version control and
-                  collaborative development.
-                </li>
-                <li class="mb-2">
-                  Engaged in Agile development methodologies, participating in
-                  iterative cycles and fostering a culture of adaptability and
-                  teamwork.
-                </li>
-                <li class="mb-2">
-                  Demonstrated proficiency in Linux (Ubuntu) environment,
-                  adapting to evolving project requirements in a dynamic
-                  development setting.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="row align-self-center text-center mx-auto">
-            <div class="col-12">
-              <a
-                class="btn btn-light mt-4 px-4 py-2 rounded montserratFont"
-                href="assets/Martin_Sidorov_2025_CV.pdf"
-                >Download CV(PDF)</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-------- SKILLS --------->
-      <section class="skillsSection" id="skills">
-        <div class="container">
-          <div class="row align-self-center text-center mx-auto">
-            <div class="col-12 skillsHeader">
-              <h1>SKILLS</h1>
-              <p class="robotoFont">
-                Next to, you can see some of those technologies that I have
-                learned at my software developer path.
-              </p>
-            </div>
-          </div>
-          <div class="row text-center mx-auto mt-5 skillsGrid">
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-html5-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-css3-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-javascript-plain" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i
-                class="devicon-bootstrap-plain-wordmark"
-                aria-hidden="true"
-              ></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-php-plain" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-go-plain" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-elm-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-mysql-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-postgresql-plain" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-csharp-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i class="devicon-git-plain-wordmark" aria-hidden="true"></i>
-            </div>
-            <div class="col-md-6 col-lg-4 p-4">
-              <i
-                class="devicon-github-original-wordmark"
-                aria-hidden="true"
-              ></i>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-------- CERTIFICATES --------->
-      <section class="certificatesSection" id="certificates">
-        <div class="container">
-          <div class="row align-self-center text-center mx-auto">
-            <div class="col-12 certificatesHeader">
-              <h1 class="orange">CERTIFICATES</h1>
-              <p class="robotoFont">My professional certifications</p>
-            </div>
-          </div>
-          <div class="row text-center mx-auto mt-5 certificatesGrid">
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <div class="d-flex justify-content-center">
-                  <div
-                    data-iframe-width="300"
-                    data-iframe-height="270"
-                    data-share-badge-id="2995b4bf-e727-498c-aef0-d545c3fbd151"
-                    data-share-badge-host="https://www.credly.com"
-                  ></div>
-                  <script
-                    type="text/javascript"
-                    async
-                    src="//cdn.credly.com/assets/utilities/embed.js"
-                  ></script>
-                </div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+          <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div class="lg:col-span-7 space-y-8">
+              <div class="space-y-2">
+                <p class="text-rose-400 text-sm font-medium tracking-widest uppercase">Software Engineer</p>
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tight">
+                  <span class="block">Martin</span>
+                  <span class="block text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-rose-600">Sidorov</span>
+                </h1>
               </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <div class="d-flex justify-content-center">
-                  <div
-                    data-iframe-width="300"
-                    data-iframe-height="270"
-                    data-share-badge-id="3755f89d-a5e1-4c3e-8105-26beace248b4"
-                    data-share-badge-host="https://www.credly.com"
-                  ></div>
-                  <script
-                    type="text/javascript"
-                    async
-                    src="//cdn.credly.com/assets/utilities/embed.js"
-                  ></script>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="https://www.freecodecamp.org/certification/matrix27/responsive-web-design"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/freecodecamp_web_design_certificate.png"
-                    alt="FreeCodeCamp Responsive Web Design Certificate"
-                  />
-                  <h3 class="text-dark">
-                    FreeCodeCamp: Responsive Web Design Certificate
-                  </h3>
+              <p class="text-zinc-400 text-lg md:text-xl max-w-xl leading-relaxed">Welcome to my portfolio</p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#resume" class="group inline-flex items-center gap-3 bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 text-sm font-medium transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-rose-500/25">
+                  <span>View Resume</span>
+                  <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-3 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white px-8 py-4 text-sm font-medium transition-all duration-300 hover:translate-y-[-2px]">
+                  <span>Contact Me</span>
                 </a>
               </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="/img/certificates/cambridge_assessment_certificate_results.png"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/cambridge_assessment_certificate_results.png"
-                    alt="Cambridge Assessment First Certificate - Score 154 (B1)"
-                  />
-                  <h3 class="text-dark">
-                    Cambridge Assessment: First Certificate - Score 154 (B1)
-                  </h3>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="https://www.udemy.com/certificate/UC-72c2769a-b983-4d5f-843a-f24bab9464c7/"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/udemy_certificate_git_complete.jpg"
-                    alt="Udemy Git Complete: The definitive, step-by-step guide to Git"
-                  />
-                  <h3 class="text-dark">
-                    Udemy: Git Complete: The definitive, step-by-step guide to
-                    Git
-                  </h3>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="https://www.udemy.com/certificate/UC-316a73ae-5640-42b5-acbc-67a06339b20f/"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/udemy_certificate_computer_science.jpg"
-                    alt="Udemy Computer Science 101: Master the Theory Behind Programming"
-                  />
-                  <h3 class="text-dark">
-                    Udemy: Computer Science 101: Master the Theory Behind
-                    Programming
-                  </h3>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="https://www.hackerrank.com/certificates/94cf75c70815"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/hackerrank_problem_solving_certificate.png"
-                    alt="HackerRank Problem Solving (Basic) Certificate"
-                  />
-                  <h3 class="text-dark">
-                    HackerRank: Problem Solving (Basic) Certificate
-                  </h3>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a href="https://hacksplaining.com" target="_blank">
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/hacksplaining_certificate.png"
-                    alt="Hacksplaining Completion Certificate"
-                  />
-                  <h3 class="text-dark">
-                    Hacksplaining: Web Developer Security Training
-                  </h3>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-4">
-              <div
-                class="card bg-white p-3 mx-auto rounded-lg"
-                style="max-width: 320px"
-              >
-                <a
-                  href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BRWRCF22EO.png"
-                  target="_blank"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/img/certificates/tryhackme_cyber_security_certificate.png"
-                    alt="TryHackMe Introduction to Cyber Security Learning Path"
-                  />
-                  <h3 class="text-dark">
-                    TryHackMe: Introduction to Cyber Security Learning Path
-                  </h3>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-------- PROJECTS --------->
-      <section class="projectsSection" id="projects">
-        <div class="container">
-          <div class="row align-self-center text-center mx-auto">
-            <div class="col-12 projectsHeader">
-              <h1>PROJECTS</h1>
-              <p class="robotoFont">Website, game projects</p>
-            </div>
-            <div class="card blacky-bg p-3 rounded">
-              <div class="row mx-auto mt-5 projectsGrid">
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://webwell.org/projects/dream-smile-competitions"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/dscompetitions.png"
-                      alt="DSCompetitions"
-                    />
-                    <h3>Website of competitions (with CMS panel)</h3>
-                  </a>
+            <div class="lg:col-span-5 relative">
+              <div class="relative aspect-square max-w-md mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-transparent rounded-3xl rotate-6"></div>
+                <div class="absolute inset-4 bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&amp;h=600&amp;fit=crop" alt="Developer workspace" class="w-full h-full object-cover opacity-80">
                 </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://webwell.org/projects/pymbris"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/of_pymbris.jpg"
-                      alt="ÕF Pümbris"
-                    />
-                    <h3>Website of wooden cases</h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://webwell.org/projects/celebrations-planner"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/celebrationPlanner.png"
-                      alt="Celebration planner project"
-                    />
-                    <h3>
-                      School thesis work: Celebration planner (with CMS panel)
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://webwell.org/projects/laptops"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/laptops.png"
-                      alt="Laptops project"
-                    />
-                    <h3>
-                      School project work: Website of laptops (with CMS panel)
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://webwell.org/projects/matrix-games"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/mGames.png"
-                      alt="MGames project"
-                    />
-                    <h3>
-                      (PROJECT DB MISSING)Website of games (with CMS panel)
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.MSANDevs.Becomeahacker"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/becomeAHacker.png"
-                      alt="Become a hacker game"
-                    />
-                    <h3>Become a hacker (Developed with Aleksei)</h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://drive.google.com/file/d/1UBB5AC07v0vTLoZd4oOLECgDJns3hnwf/view?usp=sharing"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/heisen.png"
-                      alt="Heisen 3D game"
-                    />
-                    <h3>
-                      Heisen - Horror game (My Unity 3D game developing tries)
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://github.com/Matrix278/islandtram/releases/download/1.0/IslandGame_v1.0.rar"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/islandtram.png"
-                      alt="Islandtram 3D game"
-                    />
-                    <h3>
-                      Islandtram - Survival game (My Unity 3D game developing
-                      tries)
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://codepen.io/Matrix27/pens/public"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/freeCodeCampProjects.jpg"
-                      alt="FreeCodeCamp projects"
-                    />
-                    <h3>FreeCodeCamp projects</h3>
-                  </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 p-4">
-                  <a
-                    href="https://play.google.com/store/apps/developer?id=Matrix278"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="img/martinGooglePlayGames.jpg"
-                      alt="Google Play games"
-                    />
-                    <h3>Google Play games</h3>
-                  </a>
+                <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-800 p-4 rounded-xl shadow-2xl">
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span class="text-sm text-zinc-400">Available for work</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <hr class="orange" />
-
-      <!-------- CONTACT --------->
-      <section class="contactSection" id="contact">
-        <div class="container">
-          <div class="row align-self-center mx-auto">
-            <div class="col-12 contactHeader text-left">
-              <h1>CONTACT ME</h1>
-              <p class="montserratFont">
-                Do you want to receive detailed information about my projects or
-                cooperation options? Please contact me by LinkedIn or by mail.
-              </p>
+                
+      <section id="about" class="py-24 lg:py-32 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid lg:grid-cols-12 gap-16 items-start">
+            <div class="lg:col-span-5">
+              <div class="sticky top-24">
+                <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">About Me</p>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Software Engineer &amp; Developer</h2>
+                <div class="w-16 h-1 bg-rose-500"></div>
+              </div>
             </div>
-            <div class="col-12 py-5 contactLinks">
-              <a
-                href="https://www.linkedin.com/in/martin-sidorov"
-                target="_blank"
-                ><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
-              </a>
-              <a
-                class="m-5"
-                href="https://www.github.com/Matrix278"
-                target="_blank"
-                ><i class="fa fa-github fa-4x" aria-hidden="true"></i>
-              </a>
-              <a href="mailto:martin.sidorov27@gmail.com"
-                ><i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
-              </a>
+            <div class="lg:col-span-7 space-y-8">
+              <div class="relative">
+                <div class="absolute -left-4 top-0 bottom-0 w-px bg-gradient-to-b from-rose-500 to-transparent"></div>
+                <div class="space-y-6 text-zinc-400 leading-relaxed pl-8">
+                  <p>I am a dedicated and ambitious software engineer with a solid foundation in backend development, complemented by practical experience in frontend technologies. My journey in software development has equipped me with a comprehensive understanding of building scalable, efficient, and user-centric applications.</p>
+                  <p>With a strong focus on continuous learning and professional growth, I thrive in collaborative environments where I can contribute to innovative projects while expanding my technical expertise. My experience spans across modern frameworks and technologies, enabling me to deliver robust solutions that meet business requirements.</p>
+                  <p>I am particularly passionate about clean code practices, system optimization, and creating seamless user experiences. Whether working on complex backend architectures or crafting intuitive frontend interfaces, I approach every project with dedication and attention to detail.</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
+                <div class="text-center p-6 bg-zinc-800/50 border border-zinc-700/50 rounded-xl">
+                  <p class="font-heading text-3xl font-bold text-white">3+</p>
+                  <p class="text-sm text-zinc-500 mt-1">Years Experience</p>
+                </div>
+                <div class="text-center p-6 bg-zinc-800/50 border border-zinc-700/50 rounded-xl">
+                  <p class="font-heading text-3xl font-bold text-white">20+</p>
+                  <p class="text-sm text-zinc-500 mt-1">Projects</p>
+                </div>
+                <div class="text-center p-6 bg-zinc-800/50 border border-zinc-700/50 rounded-xl">
+                  <p class="font-heading text-3xl font-bold text-white">8+</p>
+                  <p class="text-sm text-zinc-500 mt-1">Certificates</p>
+                </div>
+                <div class="text-center p-6 bg-zinc-800/50 border border-zinc-700/50 rounded-xl">
+                  <p class="font-heading text-3xl font-bold text-white">10+</p>
+                  <p class="text-sm text-zinc-500 mt-1">Technologies</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="row align-self-center text-center mx-auto">
-          <div class="col-12">
-            <p>
-              ©2020 -
-              <span class="montserratFont" id="copyright-year"></span> Martin
-              Sidorov
-            </p>
+                
+      <section id="resume" class="py-24 lg:py-32 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">My Resume</p>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white">Professional Experience</h2>
+          </div>
+          <div class="relative">
+            <div class="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-rose-500 via-zinc-700 to-transparent"></div>
+            <div class="space-y-12">
+              <div class="relative grid lg:grid-cols-2 gap-8 lg:gap-16">
+                <div class="lg:text-right lg:pr-16 order-2 lg:order-1">
+                  <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-rose-500/30 transition-colors duration-300">
+                    <div class="flex items-center gap-3 lg:justify-end mb-4">
+                      <span class="text-xs font-medium text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full">April 2022 - Present</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">Software Engineer</h3>
+                    <p class="text-rose-400 font-medium mb-4">WALLESTER AS</p>
+                    <ul class="space-y-3 text-zinc-400 text-sm">
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Enhanced system functionality by implementing fintech features for mobile applications</span>
+                      </li>
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Managed tasks independently, balancing code quality and timely delivery under tight deadlines</span>
+                      </li>
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Improved load endurance by implementing external API calls and enhancing SQL strategies</span>
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6 lg:justify-end">
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">Golang</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">PostgreSQL</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">Redis</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">Docker</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative order-1 lg:order-2 pl-16 lg:pl-16">
+                  <div class="absolute left-6 lg:left-0 lg:-translate-x-1/2 top-8 w-4 h-4 bg-rose-500 rounded-full border-4 border-zinc-950"></div>
+                </div>
+              </div>
+              <div class="relative grid lg:grid-cols-2 gap-8 lg:gap-16">
+                <div class="lg:pr-16 order-2">
+                  <div class="relative pl-16 lg:pl-0">
+                    <div class="absolute left-6 lg:left-auto lg:right-0 lg:translate-x-1/2 top-8 w-4 h-4 bg-zinc-600 rounded-full border-4 border-zinc-950"></div>
+                  </div>
+                </div>
+                <div class="lg:pl-16 order-2">
+                  <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-rose-500/30 transition-colors duration-300 ml-16 lg:ml-0">
+                    <div class="flex items-center gap-3 mb-4">
+                      <span class="text-xs font-medium text-zinc-500 bg-zinc-800 px-3 py-1 rounded-full">Sept 2021 - April 2022</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">Junior Software Engineer</h3>
+                    <p class="text-rose-400 font-medium mb-4">WALLESTER AS</p>
+                    <ul class="space-y-3 text-zinc-400 text-sm">
+                      <li class="flex items-start gap-2">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Transitioned through hubs' adapter action microservices, resolving complex technical challenges</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Prevented postponements and extra load by quickly fixing bugs and malfunctions</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Managed SQL and small microservice-using SQL optimizing problems</span>
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">PHP</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">MySQL</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">Vue.js</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative grid lg:grid-cols-2 gap-8 lg:gap-16">
+                <div class="lg:text-right lg:pr-16 order-2 lg:order-1">
+                  <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-rose-500/30 transition-colors duration-300">
+                    <div class="flex items-center gap-3 lg:justify-end mb-4">
+                      <span class="text-xs font-medium text-zinc-500 bg-zinc-800 px-3 py-1 rounded-full">January 2020 - June 2020</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">Junior Developer (Trainee)</h3>
+                    <p class="text-rose-400 font-medium mb-4">TALLINN GRUPP AS</p>
+                    <ul class="space-y-3 text-zinc-400 text-sm">
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Utilized C# language to design and execute scripts for the field of data manipulation</span>
+                      </li>
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Successfully addressed bugs and integrated new functionalities using Microsoft Dynamics</span>
+                      </li>
+                      <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right">
+                        <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Documented processes and built a culture of accessibility and improvement</span>
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6 lg:justify-end">
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">C#</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">MS Dynamics</span>
+                      <span class="text-xs bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full">SQL</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative order-1 lg:order-2 pl-16 lg:pl-16">
+                  <div class="absolute left-6 lg:left-0 lg:-translate-x-1/2 top-8 w-4 h-4 bg-zinc-700 rounded-full border-4 border-zinc-950"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-
-    <button onclick="topFunction()" id="scrollToTop" title="Scroll to top">
-      <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+      </section>
+                
+      <section id="skills" class="py-24 lg:py-32 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">Skills</p>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white">Technologies &amp; Tools</h2>
+            <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">Here is a summary of technologies and tools I used over the course of my software development path</p>
+          </div>
+          <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-6">
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#00ADD8" d="M32.1 80.8c-.5 0-.8-.1-1-.3-.2-.2-.3-.5-.3-1V64.3c0-.5.1-.8.3-1 .2-.2.5-.3 1-.3h9.8c.5 0 .8.1 1 .3.2.2.3.5.3 1v15.2c0 .5-.1.8-.3 1-.2.2-.5.3-1 .3h-9.8zm0-21.8c-.5 0-.8-.1-1-.3-.2-.2-.3-.5-.3-1V42.5c0-.5.1-.8.3-1 .2-.2.5-.3 1-.3h9.8c.5 0 .8.1 1 .3.2.2.3.5.3 1v15.2c0 .5-.1.8-.3 1-.2.2-.5.3-1 .3h-9.8z"></path>
+                  <path fill="#00ADD8" d="M64 128C28.7 128 0 99.3 0 64S28.7 0 64 0s64 28.7 64 64-28.7 64-64 64zm0-118.8C34.2 9.2 9.2 34.2 9.2 64s25 54.8 54.8 54.8 54.8-25 54.8-54.8S93.8 9.2 64 9.2z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">Golang</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#F7DF1E" d="M1 1h126v126H1z"></path>
+                  <path d="M67.312 99.574c2.6 4.2 6 7.3 12 7.3 5 0 8.2-2.5 8.2-6 0-4.2-3.3-5.7-8.8-8.1l-3-1.3c-8.7-3.7-14.5-8.4-14.5-18.2 0-9.1 6.9-16 17.7-16 7.7 0 13.2 2.7 17.2 9.7l-9.4 6c-2.1-3.7-4.3-5.2-7.8-5.2-3.5 0-5.8 2.2-5.8 5.2 0 3.6 2.3 5.1 7.5 7.3l3 1.3c10.3 4.4 16.1 8.9 16.1 19 0 10.9-8.5 16.9-20 16.9-11.2 0-18.4-5.3-22-12.3l9.6-5.6zm-41.3 1c1.9 3.4 3.6 6.3 7.8 6.3 4 0 6.5-1.6 6.5-7.7V52h11.8v47.3c0 12.7-7.5 18.5-18.4 18.5-9.8 0-15.5-5.1-18.4-11.2l10.7-6z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">JavaScript</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#777BB3" d="M64 33.039C30.26 33.039 2.906 46.901 2.906 64S30.26 94.961 64 94.961 125.094 81.099 125.094 64 97.74 33.039 64 33.039zM48.103 70.032c-1.458 1.364-3.077 1.927-4.86 2.507-1.783.581-4.052.461-6.811.461h-6.253l-1.733 10h-7.301l6.515-34H41.7c4.224 0 7.305 1.215 9.242 3.432 1.937 2.217 2.519 5.364 1.747 9.337-.319 1.637-.856 3.159-1.614 4.515-.759 1.357-1.75 2.624-2.972 3.748zm21.311 0c-1.458 1.364-3.077 1.927-4.86 2.507-1.783.581-4.052.461-6.812.461h-6.253l-1.732 10h-7.301l6.514-34h14.04c4.224 0 7.305 1.215 9.242 3.432 1.937 2.217 2.519 5.364 1.747 9.337-.319 1.637-.856 3.159-1.614 4.515-.758 1.357-1.749 2.624-2.971 3.748z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">PHP</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#00618A" d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.807 1.83 1.355 2.731 1.053 1.729 2.845 4.045 4.434 5.271 1.737 1.34 3.493 2.824 5.416 3.92 3.416 1.949 7.237 3.058 10.484 4.998 1.911 1.143 3.81 2.587 5.66 3.918 0.911.661 1.519 1.688 2.636 2.098v-.237c-.609-.781-1.267-1.094-2.041-1.6-.771-.587-1.62-1.34-2.333-2.146-2.07-2.337-4.548-5.082-6.449-7.575-1.019-1.337-1.91-2.85-2.746-4.277-.311-.532-.516-1.227-1.062-1.556-.974 1.451-2.442 2.608-3.262 4.292-.953 1.955-1.06 4.354-1.398 6.876-1.95-.286-3.32-1.266-4.28-2.141-2.416-2.204-4.428-5.135-6.008-7.979-1.683-3.028-3.186-6.445-4.629-9.778-1.041-2.403-1.696-4.781-2.924-7.122-5.718-10.891-12.075-17.63-21.775-24.188-2.057-1.391-4.557-1.927-7.18-2.637 0 0-.393-.041-.633-.041-2.134-.124-4.376.199-6.423.841-4.25 1.337-7.81 3.29-11.113 5.852-8.8 6.809-16.155 16.479-20.979 27.372-1.024 2.316-1.518 4.483-2.337 6.879-1.657 4.862-3.658 9.856-5.052 14.708-.983 3.427-1.622 6.873-2.43 10.221-.525 2.173-.896 4.375-1.581 6.456-.333 1.011-.906 2.13-1.359 3.113-.24.52-.577 1.056-.577 1.684.318.459.537.568.906.838.656.478 1.489.738 2.284 1.022 1.562.556 3.326.837 5.05.837h.006c1.377-.001 2.777-.159 4.147-.473 6.22-1.426 11.305-5.039 15.569-9.186.907-.882 1.745-1.833 2.598-2.766.388-.425.749-.878 1.195-1.247l-.001.001.002-.002c1.591-1.313 3.375-2.468 5.188-3.541 3.617-2.145 7.738-3.775 11.99-5.014 4.26-1.24 8.67-1.98 13.196-2.207 5.047-.253 10.074.107 15.041.985 4.898.866 9.71 2.315 14.354 4.279 4.659 1.97 9.14 4.481 13.344 7.449 2.09 1.475 4.094 3.068 6.015 4.755 1.91 1.675 3.664 3.499 5.443 5.295 1.775 1.794 3.445 3.673 4.991 5.634.767.974 1.495 1.981 2.202 3.001.724 1.043 1.39 2.128 2.062 3.205 1.339 2.15 2.592 4.362 3.766 6.619 1.191 2.286 2.289 4.629 3.315 7.003.51 1.181.988 2.376 1.448 3.578.462 1.207.896 2.428 1.325 3.65.857 2.442 1.659 4.905 2.409 7.383.375 1.24.731 2.486 1.075 3.735.343 1.249.666 2.504.98 3.76 1.256 5.01 2.354 10.07 3.332 15.156.49 2.543.937 5.097 1.353 7.656.207 1.28.404 2.561.591 3.845.188 1.284.365 2.569.543 3.855.354 2.571.684 5.148 1.001 7.728.159 1.29.308 2.582.453 3.874.146 1.293.283 2.587.416 3.882.267 2.587.513 5.178.744 7.769.116 1.297.223 2.595.327 3.893.103 1.299.199 2.598.291 3.898.185 2.598.352 5.199.502 7.8.076 1.3.143 2.601.206 3.902.063 1.302.118 2.604.17 3.906.103 2.604.189 5.211.257 7.817.034 1.303.06 2.607.082 3.91.022 1.304.037 2.608.045 3.912.018 2.608.019 5.216.001 7.823-.009 1.304-.024 2.607-.045 3.91-.022 1.304-.049 2.608-.082 3.912-.068 2.606-.154 5.213-.257 7.817-.052 1.302-.107 2.604-.17 3.906-.063 1.301-.13 2.602-.206 3.902-.15 2.601-.317 5.202-.502 7.8-.092 1.3-.188 2.599-.291 3.898-.104 1.298-.211 2.596-.327 3.893-.231 2.591-.477 5.182-.744 7.769-.133 1.295-.27 2.589-.416 3.882-.145 1.292-.294 2.584-.453 3.874-.317 2.58-.647 5.157-1.001 7.728-.178 1.286-.355 2.571-.543 3.855-.187 1.284-.384 2.565-.591 3.845-.416 2.559-.863 5.113-1.353 7.656-.978 5.086-2.076 10.146-3.332 15.156-.314 1.256-.637 2.511-.98 3.76-.344 1.249-.7 2.495-1.075 3.735-.75 2.478-1.552 4.941-2.409 7.383-.429 1.222-.863 2.443-1.325 3.65-.46 1.202-.938 2.397-1.448 3.578-1.026 2.374-2.124 4.717-3.315 7.003-1.174 2.257-2.427 4.469-3.766 6.619-.672 1.077-1.338 2.162-2.062 3.205-.707 1.02-1.435 2.027-2.202 3.001-1.546 1.961-3.216 3.84-4.991 5.634-1.779 1.796-3.533 3.62-5.443 5.295-1.921 1.687-3.925 3.28-6.015 4.755-4.204 2.968-8.685 5.479-13.344 7.449-4.644 1.964-9.456 3.413-14.354 4.279-4.967.878-9.994 1.238-15.041.985-4.526-.227-8.936-.967-13.196-2.207-4.252-1.239-8.373-2.869-11.99-5.014-1.813-1.073-3.597-2.228-5.188-3.541l-.002-.002.001.001c-.446-.369-.807-.822-1.195-1.247-.853-.933-1.691-1.884-2.598-2.766-4.264-4.147-9.349-7.76-15.569-9.186-1.37-.314-2.77-.472-4.147-.473h-.006c-1.724 0-3.488.281-5.05.837-.795.284-1.628.544-2.284 1.022-.369.27-.588.379-.906.838 0 .628.337 1.164.577 1.684.453.983 1.026 2.102 1.359 3.113.685 2.081 1.056 4.283 1.581 6.456.808 3.348 1.447 6.794 2.43 10.221 1.394 4.852 3.395 9.846 5.052 14.708.819 2.396 1.313 4.563 2.337 6.879 4.824 10.893 12.179 20.563 20.979 27.372 3.303 2.562 6.863 4.515 11.113 5.852 2.047.642 4.289.965 6.423.841.24 0 .393-.041.633-.041 2.623-.71 5.123-1.246 7.18-2.637 9.7-6.558 16.057-13.297 21.775-24.188 1.228-2.341 1.883-4.719 2.924-7.122 1.443-3.333 2.946-6.75 4.629-9.778 1.58-2.844 3.592-5.775 6.008-7.979.96-.875 2.33-1.855 4.28-2.141.338 2.522.445 4.921 1.398 6.876.82 1.684 2.288 2.841 3.262 4.292.546-.329.751-1.024 1.062-1.556.836-1.427 1.727-2.94 2.746-4.277 1.901-2.493 4.379-5.238 6.449-7.575.713-.806 1.562-1.559 2.333-2.146.774-.506 1.432-.819 2.041-1.6v-.237c-1.117.41-1.725 1.437-2.636 2.098-1.85 1.331-3.749 2.775-5.66 3.918-3.247 1.94-7.068 3.049-10.484 4.998-1.923 1.096-3.679 2.58-5.416 3.92-1.589 1.226-3.381 3.542-4.434 5.271-.548.901-.655 1.998-1.355 2.731.208 1.595 2.24 1.61 3.513 2.147 4.481 1.889 9.722 2.528 16.585 2.341 0 0 0 0 0 0z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">MySQL</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                  <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                  <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                  <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">HTML5</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#1572B6" d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063L108.33 26H19.67zm69.21 50.488L86.53 98.38l.009 1.875L64 106.55v.001l-.018.015-22.719-6.225L39.726 83h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495L77.702 77H39.168l-1.658-17H79.54l1.549-17H37.049l-1.623-17h57.15l-.022.242-2.676 29.246z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">CSS3</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#9B4F96" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path>
+                  <path fill="#68217A" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path>
+                  <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">C#</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">Git</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">GitHub</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#0db7ed" d="M124.8 52.1c-4.3-2.5-10-2.8-14.8-1.4-.6-5.2-4-9.7-8-12.9l-1.6-1.3-1.4 1.6c-2.7 3.1-3.5 8.3-3.1 12.3.3 2.9 1.2 5.9 3 8.3-1.4.8-2.9 1.9-4.3 2.4-2.8 1-5.9 2-8.9 2H79V49H66V24H41v12H28V24H16v37H2.8L2.5 65c-.1 3.6.6 7.3 2.1 10.7l.1.3c5.1 10.6 14.2 17.2 27.2 17.2 23.6 0 42.9-9.6 51.8-36.9l.1-.3c2.8-1.4 6.5-2.3 10.3-2.4 3.5-.1 7.2.3 10.3 2l1.8 1.1 1.1-1.8c2.2-3.4 2.2-8.4-.4-11.8zm-50 13.4c-.6 1.2-1.8 1.9-3.2 2-.3 0-.6 0-.9-.1-.6-.2-1.1-.5-1.5-.9-.4-.4-.7-.9-.9-1.5-.2-.5-.2-1.1-.1-1.6.1-.6.3-1.1.7-1.5s.9-.8 1.4-1c.2-.1.4-.1.6-.1h.1c.4 0 .8 0 1.2.2.6.2 1.1.5 1.5.9.4.4.7.9.9 1.4.2.6.2 1.2.1 1.7-.1.3-.2.6-.3.9l-.1.1-.1.3-.3.2z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">Docker</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#41B883" d="M0 8.934l49.854.158 14.167 24.47 14.432-24.47L128 8.935l-63.834 110.14zm25.751 0l38.219 65.63 38.069-65.62H87.04L63.99 44.67 40.99 8.925z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">Vue.js</p>
+            </div>
+            <div class="group bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-2xl hover:border-rose-500/30 hover:bg-zinc-800 transition-all duration-300 text-center">
+              <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <svg viewbox="0 0 128 128" class="w-10 h-10">
+                  <path fill="#336791" d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.657-14.603 4.272 0 0-44.348-18.27-42.296 23.013.437 8.786 12.528 66.511 26.954 49.088 5.27-6.373 10.352-11.753 10.352-11.753 2.526 1.68 5.552 2.524 8.752 2.199l.245-.021a9.854 9.854 0 00-.065.974c-2.396 2.684-1.693 3.153-6.478 4.139-4.846.999-2.002 2.776-.141 3.243 2.244.563 7.438 1.36 10.946-3.568l-.214.685c1.439 1.149 2.449 7.465 2.284 13.186-.164 5.722.029 11.41 1.536 14.273 1.502 2.851 2.616 9.288 13.771 7.371 9.343-1.604 14.18-5.764 14.839-12.692z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-zinc-400 group-hover:text-white transition-colors">PostgreSQL</p>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section id="certificates" class="py-24 lg:py-32 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">Certificates</p>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white">Professional Certifications</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">FreeCodeCamp Responsive Web Design Certificate</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">Udemy Git Complete: The Definitive, Step-by-step Guide to Git</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">Udemy Computer Science 101: Master the Theory Behind Programming</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">HackerRank Problem Solving (Basic) Certificate</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">Hackerrank: Web Penetration Security Training</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">Cybrary: Introduction to Cyber Security (Gamified Learning)</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">Cambridge Assessment English First Certificate</h3>
+            </div>
+            <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video bg-zinc-800 rounded-lg mb-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&amp;h=225&amp;fit=crop" alt="Certificate" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+              </div>
+              <h3 class="font-medium text-white text-sm">FreeCodeCamp JavaScript Algorithms and Data Structures</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section id="projects" class="py-24 lg:py-32 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">Projects</p>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white">Portfolio &amp; Applications</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&amp;h=340&amp;fit=crop" alt="Website project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">Website of Construction Company</h3>
+                <p class="text-zinc-500 text-sm mb-4">With CMS Panel</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">PHP</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">MySQL</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">CMS</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&amp;h=340&amp;fit=crop" alt="Website project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">Robot Cleaner Website</h3>
+                <p class="text-zinc-500 text-sm mb-4">With CMS Panel</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">PHP</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">CMS</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&amp;h=340&amp;fit=crop" alt="Website project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">Website of Wooden Cases</h3>
+                <p class="text-zinc-500 text-sm mb-4">Static Website</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">HTML</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">CSS</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">JS</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=600&amp;h=340&amp;fit=crop" alt="Game project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">Retsax - Horror Game</h3>
+                <p class="text-zinc-500 text-sm mb-4">3D Unity Game</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">Unity</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">C#</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&amp;h=340&amp;fit=crop" alt="Game project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">SlimeWorm - Survival Game</h3>
+                <p class="text-zinc-500 text-sm mb-4">2D Unity Game</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">Unity</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">C#</span>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden hover:border-rose-500/30 transition-all duration-300">
+              <div class="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?w=600&amp;h=340&amp;fit=crop" alt="FreeCodeCamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading text-lg font-semibold text-white mb-2">FreeCodeCamp Projects</h3>
+                <p class="text-zinc-500 text-sm mb-4">Various Assignments</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">JavaScript</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">HTML</span>
+                  <span class="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded">CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section id="contact" class="py-24 lg:py-32 bg-zinc-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-rose-500/5 to-transparent"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <p class="text-rose-400 text-sm font-medium tracking-widest uppercase mb-4">Contact Me</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Let's Work Together</h2>
+          <p class="text-zinc-400 text-lg mb-12 max-w-2xl mx-auto">Do you want to receive detailed information about my projects or cooperation options? Please use the contacts listed below.</p>
+          <div class="flex justify-center gap-6">
+            <a href="#" class="group w-14 h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center hover:border-rose-500/50 hover:bg-zinc-800 transition-all duration-300">
+              <svg class="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+              </svg>
+            </a>
+            <a href="#" class="group w-14 h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center hover:border-rose-500/50 hover:bg-zinc-800 transition-all duration-300">
+              <svg class="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+              </svg>
+            </a>
+            <a href="#" class="group w-14 h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center hover:border-rose-500/50 hover:bg-zinc-800 transition-all duration-300">
+              <svg class="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+                
+      <footer class="py-8 bg-zinc-900 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-zinc-500 text-sm">2026 Martin Sidorov. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+              <a href="#about" class="text-sm text-zinc-500 hover:text-white transition-colors">About</a>
+              <a href="#resume" class="text-sm text-zinc-500 hover:text-white transition-colors">Resume</a>
+              <a href="#projects" class="text-sm text-zinc-500 hover:text-white transition-colors">Projects</a>
+              <a href="#contact" class="text-sm text-zinc-500 hover:text-white transition-colors">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/global-149823.js?v=1791029613"></script>
+</body>
 </html>
+
