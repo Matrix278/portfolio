@@ -28,6 +28,40 @@
   const year = document.getElementById('copyright-year');
   if (year) year.textContent = String(new Date().getFullYear());
 
+  const projectGrid = document.getElementById('projects-grid');
+  const projectFilters = document.querySelector('.project-filters');
+  if (projectGrid && projectFilters) {
+    const filterButtons = Array.from(projectFilters.querySelectorAll('button[data-project-filter]'));
+    const projects = Array.from(projectGrid.querySelectorAll('.project-card')).map((card) => ({
+      card,
+      categories: (card.dataset.projectCategories || '').split(/\s+/),
+    }));
+    const projectCount = document.getElementById('project-count');
+
+    if (filterButtons.length && projects.length) {
+      const setProjectFilter = (category) => {
+        let visibleCount = 0;
+        projects.forEach(({ card, categories }) => {
+          const visible = category === 'all' || categories.includes(category);
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+        filterButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.projectFilter === category));
+        });
+        if (projectCount) {
+          projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'project' : 'projects'}`;
+        }
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => setProjectFilter(button.dataset.projectFilter));
+      });
+      setProjectFilter('all');
+      projectFilters.hidden = false;
+    }
+  }
+
   // The vendor's floating launcher is a div; make it keyboard accessible.
   const enhanceCoffeeWidget = () => {
     const widget = document.getElementById('bmc-wbtn');
