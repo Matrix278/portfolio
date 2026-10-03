@@ -115,7 +115,7 @@
       while ((node = walker.nextNode())) textNodes.push(node);
     });
 
-    // Keep every letter in place, including the period's existing color span.
+    // Keep every letter in place, with the decorative period outside the animation.
     // The heading's static accessible label stays unchanged while it animates.
     const characters = [];
     textNodes.forEach((node) => {
@@ -221,9 +221,10 @@
   }
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (reducedMotion.matches) return;
+  if (!reducedMotion.addEventListener && !reducedMotion.addListener) return;
 
   const skipButton = editor.querySelector('.typing-skip');
+  const replayButton = editor.querySelector('.typing-replay');
   const code = editor.querySelector('.editor-code');
 
   let timelineLength = 0;
@@ -241,8 +242,8 @@
   let elapsed = 0;
   let previousFrame = null;
   let frameId = 0;
-  let started = false;
-  let finished = false;
+  let playing = false;
+  let autoplayPending = !reducedMotion.matches;
 
   // Clip only the painted text. The full code, its highlighting, and its
   // dimensions stay intact throughout, including for assistive technology.
@@ -255,11 +256,13 @@
   };
 
   const finish = () => {
-    if (finished) return;
-    const restoreFocus = skipButton && document.activeElement === skipButton;
-    finished = true;
+    const focusHiddenControl = (skipButton && document.activeElement === skipButton) ||
+      (replayButton && document.activeElement === replayButton && reducedMotion.matches);
+    playing = false;
+    autoplayPending = false;
     window.cancelAnimationFrame(frameId);
     frameId = 0;
+    previousFrame = null;
     observer.disconnect();
     editor.classList.remove('code-typing');
     editor.classList.add('typing-done');
@@ -267,22 +270,20 @@
       line.classList.remove('typing-line');
       line.style.removeProperty('--typed-width');
     });
-    if (skipButton) {
-      skipButton.hidden = true;
-      skipButton.removeEventListener('click', finish);
+    if (skipButton) skipButton.hidden = true;
+    if (replayButton) replayButton.hidden = reducedMotion.matches;
+    if (focusHiddenControl) {
+      const focusTarget = replayButton && !replayButton.hidden ? replayButton : code;
+      if (focusTarget) focusTarget.focus({ preventScroll: true });
     }
-    if (code) code.removeEventListener('focus', finish);
-    document.removeEventListener('visibilitychange', onVisibilityChange);
-    if (reducedMotion.removeEventListener) {
-      reducedMotion.removeEventListener('change', onMotionChange);
-    } else {
-      reducedMotion.removeListener(onMotionChange);
-    }
-    if (restoreFocus && code) code.focus({ preventScroll: true });
   };
 
   const frame = (timestamp) => {
     frameId = 0;
+    if (!playing || document.hidden) {
+      previousFrame = null;
+      return;
+    }
     if (previousFrame !== null) elapsed += timestamp - previousFrame;
     previousFrame = timestamp;
     if (elapsed >= duration) {
@@ -294,10 +295,37 @@
   };
 
   const resume = () => {
-    if (started && !finished && !document.hidden && !frameId) {
+    if (playing && !document.hidden && !frameId) {
       previousFrame = null;
       frameId = window.requestAnimationFrame(frame);
     }
+  };
+
+  const startTyping = (replaying = false) => {
+    if (playing) return;
+    if (reducedMotion.matches) {
+      finish();
+      return;
+    }
+    const focusReplay = replayButton && document.activeElement === replayButton;
+    autoplayPending = false;
+    observer.disconnect();
+    window.cancelAnimationFrame(frameId);
+    frameId = 0;
+    elapsed = 0;
+    previousFrame = null;
+    playing = true;
+    if (replaying && code) code.scrollLeft = 0;
+    reveal(0);
+    editor.classList.remove('typing-done');
+    editor.classList.add('code-typing');
+    if (replayButton) replayButton.hidden = true;
+    if (skipButton) skipButton.hidden = false;
+    if (focusReplay) {
+      const focusTarget = skipButton || code;
+      if (focusTarget) focusTarget.focus({ preventScroll: true });
+    }
+    resume();
   };
 
   function onVisibilityChange() {
@@ -311,21 +339,24 @@
   }
 
   function onMotionChange(event) {
-    if (event.matches) finish();
+    if (event.matches) {
+      finish();
+    } else if (!playing && replayButton) {
+      replayButton.hidden = false;
+    }
+  }
+
+  function onCodeFocus() {
+    if (playing || autoplayPending) finish();
   }
 
   const observer = new IntersectionObserver((entries) => {
-    if (finished || started || !entries.some((entry) => entry.isIntersecting)) return;
+    if (!autoplayPending || !entries.some((entry) => entry.isIntersecting)) return;
     if (code && document.activeElement === code) {
       finish();
       return;
     }
-    started = true;
-    observer.disconnect();
-    reveal(0);
-    editor.classList.add('code-typing');
-    if (skipButton) skipButton.hidden = false;
-    resume();
+    startTyping();
   }, { threshold: 0.1 });
 
   document.addEventListener('visibilitychange', onVisibilityChange);
@@ -335,6 +366,8 @@
     reducedMotion.addListener(onMotionChange);
   }
   if (skipButton) skipButton.addEventListener('click', finish);
-  if (code) code.addEventListener('focus', finish);
-  observer.observe(editor);
+  if (replayButton) replayButton.addEventListener('click', () => startTyping(true));
+  if (code) code.addEventListener('focus', onCodeFocus);
+  if (autoplayPending) observer.observe(editor);
+  else finish();
 })();

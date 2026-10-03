@@ -47,9 +47,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, pre:focus-visible 
 .name-character { position: relative; }
 .name-typing .name-character { visibility: hidden; }
 .name-typing .name-character.is-visible { visibility: visible; }
-.name-character.is-current::after { content: ""; position: absolute; top: .15em; left: 100%; width: 2px; height: .72em; background: var(--accent); animation: cursor-blink .65s steps(1) infinite; pointer-events: none; }
+.name-character.is-current::after, .hero-period::after { content: ""; position: absolute; top: .15em; left: 100%; width: 2px; height: .72em; background: var(--accent); pointer-events: none; }
+.name-character.is-current::after { animation: cursor-blink .65s steps(1) infinite; }
+.hero-period::after { left: calc(100% + .08em); animation: cursor-blink 1s steps(1) infinite; }
+.name-typing .hero-period { visibility: hidden; }
 .hero-copy { animation: hero-enter .65s ease-out both; }
-.hero-period { color: var(--accent); }
+.hero-period { position: relative; color: var(--accent); }
 .hero-statement { font-family: "Space Grotesk", sans-serif; font-size: clamp(22px, 2vw, 28px); line-height: 1.4; letter-spacing: -.03em; margin: 0 0 18px; color: #e4e4e7; }
 .hero-description { max-width: 450px; color: var(--muted); font-size: 15px; line-height: 1.85; margin: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
@@ -67,8 +70,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, pre:focus-visible 
 .editor-path, .editor-language { font-family: var(--mono); font-size: 10px; color: #a1a1aa; }
 .editor-path { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
 .editor-language { color: #67e8f9; }
-.typing-skip { font-family: var(--mono); font-size: 9px; padding: 4px 7px; border: 1px solid #3f3f46; border-radius: 4px; color: #d4d4d8; cursor: pointer; white-space: nowrap; }
-.typing-skip:hover { border-color: var(--accent); color: var(--accent); }
+.typing-skip, .typing-replay { font-family: var(--mono); font-size: 9px; padding: 4px 7px; border: 1px solid #3f3f46; border-radius: 4px; color: #d4d4d8; cursor: pointer; white-space: nowrap; }
+.typing-skip:hover, .typing-replay:hover { border-color: var(--accent); color: var(--accent); }
 .editor-file { display: flex; align-items: center; gap: 8px; width: max-content; font-family: var(--mono); font-size: 11px; padding: 13px 18px; border-right: 1px solid var(--border); border-top: 2px solid var(--accent); background: #101013; color: #d4d4d8; }
 .go-mark { font-size: 10px; font-style: italic; font-weight: 500; color: #67e8f9; }
 .editor-file-dot { width: 6px; height: 6px; background: #52525b; border-radius: 50%; margin-left: 12px; }
