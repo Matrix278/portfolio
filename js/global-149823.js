@@ -99,6 +99,121 @@
     widgetObserver.observe(document.body, { childList: true, subtree: true });
   }
 
+  const initializeNameTyping = () => {
+    const title = document.getElementById('hero-title');
+    if (!title || !window.IntersectionObserver || !window.requestAnimationFrame ||
+        !window.matchMedia || !window.NodeFilter || !document.createTreeWalker) return;
+
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (motionPreference.matches ||
+        (!motionPreference.addEventListener && !motionPreference.addListener)) return;
+
+    const textNodes = [];
+    title.querySelectorAll('[data-name-part]').forEach((part) => {
+      const walker = document.createTreeWalker(part, window.NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) textNodes.push(node);
+    });
+
+    // Keep every letter in place, including the period's existing color span.
+    // The heading's static accessible label stays unchanged while it animates.
+    const characters = [];
+    textNodes.forEach((node) => {
+      const fragment = document.createDocumentFragment();
+      Array.from(node.nodeValue).forEach((letter) => {
+        const character = document.createElement('span');
+        character.className = 'name-character';
+        character.textContent = letter;
+        fragment.appendChild(character);
+        characters.push(character);
+      });
+      node.parentNode.replaceChild(fragment, node);
+    });
+    if (!characters.length) return;
+
+    const duration = 1500;
+    let elapsed = 0;
+    let previousFrame = null;
+    let frameId = 0;
+    let started = false;
+    let finished = false;
+
+    const reveal = (count) => {
+      characters.forEach((character, index) => {
+        character.classList.toggle('is-visible', index < count);
+        character.classList.toggle('is-current', index === count - 1);
+      });
+    };
+
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      window.cancelAnimationFrame(frameId);
+      frameId = 0;
+      observer.disconnect();
+      reveal(characters.length);
+      title.classList.remove('name-typing');
+      characters.forEach((character) => character.classList.remove('is-current'));
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      if (motionPreference.removeEventListener) {
+        motionPreference.removeEventListener('change', onMotionChange);
+      } else {
+        motionPreference.removeListener(onMotionChange);
+      }
+    };
+
+    const frame = (timestamp) => {
+      frameId = 0;
+      if (previousFrame !== null) elapsed += timestamp - previousFrame;
+      previousFrame = timestamp;
+      if (elapsed >= duration) {
+        finish();
+        return;
+      }
+      reveal(Math.floor((elapsed / duration) * characters.length));
+      frameId = window.requestAnimationFrame(frame);
+    };
+
+    const resume = () => {
+      if (started && !finished && !document.hidden && !frameId) {
+        previousFrame = null;
+        frameId = window.requestAnimationFrame(frame);
+      }
+    };
+
+    function onVisibilityChange() {
+      if (document.hidden) {
+        window.cancelAnimationFrame(frameId);
+        frameId = 0;
+        previousFrame = null;
+      } else {
+        resume();
+      }
+    }
+
+    function onMotionChange(event) {
+      if (event.matches) finish();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      if (finished || started || !entries.some((entry) => entry.isIntersecting)) return;
+      started = true;
+      observer.disconnect();
+      reveal(0);
+      title.classList.add('name-typing');
+      resume();
+    }, { threshold: 0.1 });
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    if (motionPreference.addEventListener) {
+      motionPreference.addEventListener('change', onMotionChange);
+    } else {
+      motionPreference.addListener(onMotionChange);
+    }
+    observer.observe(title);
+  };
+  initializeNameTyping();
+
   const editor = document.querySelector('.hero-editor');
   if (!editor || !window.IntersectionObserver || !window.requestAnimationFrame ||
       !window.matchMedia || !window.CSS?.supports('clip-path', 'polygon(0 0, 1ch 0, 1ch 100%, 0 100%)')) {
