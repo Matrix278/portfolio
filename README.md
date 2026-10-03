@@ -1,19 +1,19 @@
 # Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e3cb3235-6451-461f-8851-e924f3f3b6b2/deploy-status)](https://app.netlify.com/sites/martin-portfolio/deploys)
-
 ### My Portfolio site -
 
 https://martinsidorov.com
 
 https://matrix278.github.io/portfolio/
 
-Bootstrap v5.0
+The current portfolio is the static site in the repository root: `index.html`,
+`css/portfolio.css`, `css/tailwind/tailwind.min.css`, and `js/global-149823.js`.
+No build step is required. The site is hosted on GitHub Pages.
 
-Font Awesome - https://fontawesome.com/v4.7.0/
+To preview locally, run `python3 -m http.server 4173` from this directory and open
+http://localhost:4173.
 
-Google Fonts:
+Previous designs remain in `first-portfolio`, `second-portfolio`, and
+`third-portfolio`.
 
-- https://fonts.google.com/specimen/Oswald#standard-styles
-- https://fonts.google.com/specimen/Montserrat
-- https://fonts.google.com/specimen/Roboto
+Fonts: DM Sans, Space Grotesk, and IBM Plex Mono via Google Fonts.
