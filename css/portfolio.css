@@ -67,10 +67,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, pre:focus-visible 
 .window-controls span { width: 8px; height: 8px; border-radius: 50%; background: #f87171; }
 .window-controls span:nth-child(2) { background: #fbbf24; }
 .window-controls span:nth-child(3) { background: #34d399; }
-.editor-path, .editor-language { font-family: var(--mono); font-size: 10px; color: #a1a1aa; }
+.editor-path, .editor-language { font-family: var(--mono); font-size: 11px; color: #a1a1aa; }
 .editor-path { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
 .editor-language { color: #67e8f9; }
-.typing-skip, .typing-replay { font-family: var(--mono); font-size: 9px; padding: 4px 7px; border: 1px solid #3f3f46; border-radius: 4px; color: #d4d4d8; cursor: pointer; white-space: nowrap; }
+.typing-skip, .typing-replay { font-family: var(--mono); font-size: 11px; padding: 4px 7px; border: 1px solid #3f3f46; border-radius: 4px; color: #d4d4d8; cursor: pointer; white-space: nowrap; }
 .typing-skip:hover, .typing-replay:hover { border-color: var(--accent); color: var(--accent); }
 .editor-file { display: flex; align-items: center; gap: 8px; width: max-content; font-family: var(--mono); font-size: 11px; padding: 13px 18px; border-right: 1px solid var(--border); border-top: 2px solid var(--accent); background: #101013; color: #d4d4d8; }
 .go-mark { font-size: 10px; font-style: italic; font-weight: 500; color: #67e8f9; }
@@ -94,9 +94,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, pre:focus-visible 
 .terminal-hint { color: #a1a1aa; }
 .editor-terminal[open] .terminal-hint { color: var(--accent); }
 .terminal-response { padding: 0 18px 20px; font-family: var(--mono); font-size: 11px; color: #a7d7b4; }
-.terminal-response p { font-size: 10px; margin-bottom: 12px; color: #71717a; }
+.terminal-response p { font-size: 11px; margin-bottom: 12px; color: var(--muted); }
 .terminal-response pre { overflow: auto; line-height: 1.8; }
-.editor-status { display: flex; justify-content: space-between; gap: 16px; font-family: var(--mono); font-size: 9px; padding: 9px 18px; color: #71717a; border-top: 1px solid var(--border); }
+.editor-status { display: flex; justify-content: space-between; gap: 16px; font-family: var(--mono); font-size: 11px; padding: 9px 18px; color: var(--muted); border-top: 1px solid var(--border); }
 .editor-status > span:first-child { display: inline-flex; align-items: center; gap: 7px; }
 .status-dot { width: 5px; height: 5px; border-radius: 50%; background: #67e8f9; }
 .hero-bottom { border-top: 1px solid var(--border); padding: 24px 0 28px; display: flex; justify-content: space-between; gap: 24px; font-family: var(--mono); font-size: 10px; }
@@ -207,6 +207,9 @@ body:has(#bmc-wbtn) .coffee-launcher { display: none; }
 @keyframes hero-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes cursor-blink { 50% { opacity: 0; } }
 
+.mobile-show-more { display: flex; width: max-content; max-width: 100%; margin: 28px auto 0; min-height: 48px; font: inherit; font-size: 13px; }
+
+@media (min-width: 600px) { .mobile-show-more { display: none; } }
 @media (min-width: 960px) { .mobile-menu { display: none; } }
 @media (max-width: 1100px) {
   .section-container { padding-inline: 32px; }
@@ -241,6 +244,8 @@ body:has(#bmc-wbtn) .coffee-launcher { display: none; }
   .skill-group ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 599px) {
+  main.mobile-compact #projects { background: #09090b; }
+  main.mobile-compact #certificates { background: #18181b; }
   .section-container { padding-inline: 24px; }
   section.py-24 { padding-top: 72px; padding-bottom: 72px; }
   .site-nav { min-height: 70px; }
@@ -260,7 +265,7 @@ body:has(#bmc-wbtn) .coffee-launcher { display: none; }
   .editor-code { font-size: 10px; }
   .line-number { width: 38px; padding-right: 12px; }
   .typing-line::after { left: calc(38px + var(--typed-width, 0ch)); }
-  .editor-terminal summary { padding: 15px 14px; font-size: 9px; }
+  .editor-terminal summary { padding: 15px 14px; font-size: 11px; }
   .hero-bottom p { gap: 14px; font-size: 9px; }
   .hero-bottom-label { flex-basis: 100%; }
   .section-heading { margin-bottom: 36px; }

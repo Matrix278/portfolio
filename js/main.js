@@ -28,39 +28,149 @@
   const year = document.getElementById('copyright-year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const projectGrid = document.getElementById('projects-grid');
-  const projectFilters = document.querySelector('.project-filters');
-  if (projectGrid && projectFilters) {
-    const filterButtons = Array.from(projectFilters.querySelectorAll('button[data-project-filter]'));
-    const projects = Array.from(projectGrid.querySelectorAll('.project-card')).map((card) => ({
-      card,
-      categories: (card.dataset.projectCategories || '').split(/\s+/),
-    }));
-    const projectCount = document.getElementById('project-count');
+  const initializeCollections = () => {
+    const phoneQuery = window.matchMedia ? window.matchMedia('(max-width: 599px)') : null;
+    const phone = phoneQuery && (phoneQuery.addEventListener || phoneQuery.addListener) ? phoneQuery : null;
+    const isPhone = () => Boolean(phone && phone.matches);
+    const main = document.getElementById('main-content');
+    const projectSection = document.getElementById('projects');
+    const certificateSection = document.getElementById('certificates');
+    const projectLink = menu && menu.querySelector('a[href="#projects"]');
+    const certificateLink = menu && menu.querySelector('a[href="#certificates"]');
+    const focus = (element) => {
+      if (element) element.focus({ preventScroll: true });
+    };
+    const preview = (items, limit) => [
+      ...items.filter((item) => item.featured),
+      ...items.filter((item) => !item.featured),
+    ].slice(0, limit);
 
-    if (filterButtons.length && projects.length) {
-      const setProjectFilter = (category) => {
-        let visibleCount = 0;
-        projects.forEach(({ card, categories }) => {
-          const visible = category === 'all' || categories.includes(category);
-          card.hidden = !visible;
-          if (visible) visibleCount += 1;
-        });
+    // Move the existing nodes, preserving IDs, listeners, and keyboard focus.
+    const orderPair = (projects, certificates) => {
+      if (!projects || !certificates || projects.parentNode !== certificates.parentNode) return false;
+      const first = isPhone() ? projects : certificates;
+      const second = isPhone() ? certificates : projects;
+      if (first.nextElementSibling !== second) {
+        const active = document.activeElement;
+        const containsFocus = first.contains(active);
+        first.parentNode.insertBefore(first, second);
+        if (containsFocus && active.isConnected && document.activeElement !== active) focus(active);
+      }
+      return true;
+    };
+
+    let renderProjects = () => {};
+    let renderCertificates = () => {};
+    const projectGrid = document.getElementById('projects-grid');
+    const projectFilters = document.querySelector('.project-filters');
+    const projectToggle = document.querySelector('button[data-show-more="projects"]');
+    if (projectGrid && projectFilters) {
+      const filterButtons = Array.from(projectFilters.querySelectorAll('button[data-project-filter]'));
+      const projects = Array.from(projectGrid.querySelectorAll('.project-card')).map((card) => ({
+        card,
+        categories: (card.dataset.projectCategories || '').split(/\s+/),
+        featured: card.dataset.projectFeatured === 'true',
+      }));
+      const projectCount = document.getElementById('project-count');
+      let category = 'all';
+      let expanded = false;
+
+      if (filterButtons.length && projects.length) {
+        renderProjects = () => {
+          const matching = projects.filter((project) => category === 'all' || project.categories.includes(category));
+          const compact = isPhone() && Boolean(projectToggle);
+          const visible = compact && !expanded ? preview(matching, 3) : matching;
+          const visibleCards = new Set(visible.map((project) => project.card));
+          const active = document.activeElement;
+          let hidesFocus = false;
+          projects.forEach(({ card }) => {
+            const hidden = !visibleCards.has(card);
+            if (hidden && card.contains(active)) hidesFocus = true;
+            card.hidden = hidden;
+          });
+          filterButtons.forEach((button) => {
+            button.setAttribute('aria-pressed', String(button.dataset.projectFilter === category));
+          });
+          if (projectCount) {
+            const count = visible.length < matching.length ? `${visible.length} of ${matching.length}` : String(matching.length);
+            projectCount.textContent = `${count} ${matching.length === 1 ? 'project' : 'projects'}`;
+          }
+          if (projectToggle) {
+            projectToggle.hidden = !compact || matching.length <= 3;
+            projectToggle.setAttribute('aria-expanded', String(compact && expanded && matching.length > 3));
+            projectToggle.textContent = compact && expanded ? 'Show fewer projects' : 'Show more projects';
+          }
+          if (hidesFocus || (projectToggle && active === projectToggle && projectToggle.hidden)) {
+            focus(projectToggle && !projectToggle.hidden ? projectToggle :
+              filterButtons.find((button) => button.dataset.projectFilter === category));
+          }
+        };
+
         filterButtons.forEach((button) => {
-          button.setAttribute('aria-pressed', String(button.dataset.projectFilter === category));
+          button.addEventListener('click', () => {
+            category = button.dataset.projectFilter;
+            expanded = false;
+            renderProjects();
+          });
         });
-        if (projectCount) {
-          projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'project' : 'projects'}`;
+        if (projectToggle) {
+          projectToggle.addEventListener('click', () => {
+            const collapsing = isPhone() && expanded && !projectToggle.hidden;
+            expanded = !expanded;
+            renderProjects();
+            if (collapsing) projectSection?.scrollIntoView({ block: 'start', behavior: 'auto' });
+          });
+        }
+        projectFilters.hidden = false;
+      }
+    }
+
+    const certificateGrid = document.getElementById('certificates-grid');
+    const certificateToggle = document.querySelector('button[data-show-more="certificates"]');
+    if (certificateGrid && certificateToggle) {
+      const certificates = Array.from(certificateGrid.querySelectorAll('.certificate-card')).map((card) => ({
+        card,
+        featured: card.dataset.certificateFeatured === 'true',
+      }));
+      let expanded = false;
+      renderCertificates = () => {
+        const compact = isPhone();
+        const visible = compact && !expanded ? preview(certificates, 2) : certificates;
+        const visibleCards = new Set(visible.map((certificate) => certificate.card));
+        const active = document.activeElement;
+        let hidesFocus = false;
+        certificates.forEach(({ card }) => {
+          const hidden = !visibleCards.has(card);
+          if (hidden && card.contains(active)) hidesFocus = true;
+          card.hidden = hidden;
+        });
+        certificateToggle.hidden = !compact || certificates.length <= 2;
+        certificateToggle.setAttribute('aria-expanded', String(compact && expanded && certificates.length > 2));
+        certificateToggle.textContent = compact && expanded ? 'Show fewer certificates' : 'Show more certificates';
+        if (hidesFocus || (active === certificateToggle && certificateToggle.hidden)) {
+          focus(!certificateToggle.hidden ? certificateToggle : visible[0]?.card);
         }
       };
-
-      filterButtons.forEach((button) => {
-        button.addEventListener('click', () => setProjectFilter(button.dataset.projectFilter));
+      certificateToggle.addEventListener('click', () => {
+        const collapsing = isPhone() && expanded && !certificateToggle.hidden;
+        expanded = !expanded;
+        renderCertificates();
+        if (collapsing) certificateSection?.scrollIntoView({ block: 'start', behavior: 'auto' });
       });
-      setProjectFilter('all');
-      projectFilters.hidden = false;
     }
-  }
+
+    const renderCollections = () => {
+      const sectionsOrdered = orderPair(projectSection, certificateSection);
+      orderPair(projectLink, certificateLink);
+      if (main) main.classList.toggle('mobile-compact', isPhone() && sectionsOrdered);
+      renderProjects();
+      renderCertificates();
+    };
+    if (phone?.addEventListener) phone.addEventListener('change', renderCollections);
+    else if (phone?.addListener) phone.addListener(renderCollections);
+    renderCollections();
+  };
+  initializeCollections();
 
   // The vendor's floating launcher is a div; make it keyboard accessible.
   const enhanceCoffeeWidget = () => {
