@@ -122,6 +122,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, pre:focus-visible 
 .experience-list { max-width: 1040px; margin-inline: auto; }
 .experience-item { display: grid; grid-template-columns: 220px 1fr; gap: 28px; margin-bottom: 28px; }
 .experience-date { position: relative; padding: 32px 0 0 24px; font-family: var(--mono); font-size: 11px; line-height: 1.6; color: var(--muted); }
+.experience-location { display: block; margin-top: 8px; font-family: "DM Sans", sans-serif; font-size: 11px; }
 .experience-date::after { position: absolute; content: ""; width: 1px; background: var(--border); left: 4px; top: 50px; bottom: -48px; }
 .experience-item:last-child .experience-date::after { display: none; }
 .timeline-dot { width: 9px; height: 9px; background: #52525b; border-radius: 50%; position: absolute; left: 0; top: 36px; }
