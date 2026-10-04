@@ -22,15 +22,64 @@
     <meta name="twitter:image" content="https://martinsidorov.com/assets/social-preview.png">
     <meta name="twitter:image:alt" content="Martin Sidorov, Software Engineer. Go, gRPC, AWS. Green portfolio branding with a Go code editor.">
     <meta name="theme-color" content="#09090b">
+    <style>
+      html, body { background: #09090b; }
+      body { margin: 0; color: #f4f4f5; }
+      .page-loader { display: none; }
+      html.is-loading { overflow: hidden; }
+      html.is-loading body > :not(#page-loader) { visibility: hidden !important; }
+      html.is-loading .hero-copy { animation: none; }
+      html.is-loading .page-loader { position: fixed; inset: 0; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; background: #09090b; font: 14px/1.5 system-ui, sans-serif; }
+      .loader-mark { color: #4ade80; font: 32px/1 monospace; }
+      .loader-label { color: #a1a1aa; letter-spacing: .04em; }
+      .loader-track { width: 120px; height: 2px; overflow: hidden; background: #27272a; border-radius: 2px; }
+      .loader-track::after { content: ""; display: block; width: 40%; height: 100%; background: #4ade80; animation: loader-progress 1.2s ease-in-out infinite; }
+      @keyframes loader-progress { from { transform: translateX(-100%); } to { transform: translateX(350%); } }
+      @media (prefers-reduced-motion: reduce) { .loader-track::after { animation: none; width: 100%; } }
+    </style>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        let released = false;
+        let deadline;
+        const release = () => {
+          if (released) return false;
+          released = true;
+          clearTimeout(deadline);
+          root.classList.remove('is-loading');
+          const content = document.getElementById('site-content');
+          if (content) {
+            content.inert = false;
+            content.removeAttribute('aria-busy');
+          }
+          return true;
+        };
+        const hold = () => {
+          const content = document.getElementById('site-content');
+          if (!released && content) {
+            content.inert = true;
+            content.setAttribute('aria-busy', 'true');
+          }
+        };
+        root.classList.add('is-loading');
+        window.portfolioBoot = { release, hold, isLoading: () => !released };
+        // A missing or broken main script must never trap visitors in the loader.
+        deadline = setTimeout(release, 8000);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+    <link id="portfolio-fonts" rel="stylesheet" media="print" onload="this.media='all'; this.dataset.loaded='true'" onerror="this.dataset.failed='true'" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"></noscript>
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script src="js/main.js" defer></script>
   </head>
   <body class="antialiased font-body bg-zinc-950 text-zinc-100">
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-atomic="true"><span class="loader-mark" aria-hidden="true">&lt;/&gt;</span><span class="loader-label">Loading portfolio</span><span class="loader-track" aria-hidden="true"></span></div>
+    <div id="site-content">
+    <script>window.portfolioBoot?.hold();</script>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header"><nav class="section-container site-nav" aria-label="Main navigation"><a class="site-brand" href="#home"><span aria-hidden="true" class="brand-brackets">&lt;</span>Martin Sidorov<span aria-hidden="true" class="brand-brackets">/&gt;</span></a><div class="desktop-menu"><a href="#about">About</a><a href="#resume">Resume</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></nav><div id="mobile-menu" class="section-container mobile-menu" hidden><a href="#about">About</a><a href="#resume">Resume</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></header>
     <main id="main-content">
@@ -279,6 +328,7 @@
       <svg aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11h17l-2 16H9L7 11ZM6 7h19v4H6zM10 4h11l2 3M12 15l1 8m6-8-1 8"/></svg>
       <span class="coffee-tooltip" aria-hidden="true">Buy me a coffee</span>
     </a>
+    </div>
     <script defer data-name="BMC-Widget" data-cfasync="false"
       src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
       data-id="matrix278" data-description="Support me on Buy me a coffee!"
